@@ -19,8 +19,11 @@ public class Token {
     @GeneratedValue
     private Long id;
 
-    private String token;
+    @Column(name = "access_token")
+    private String accessToken;
 
+    @Column(name = "refresh_token")
+    private String refreshToken;
 
     @Column(name = "created_date", nullable = false, updatable = false)
     private LocalDateTime createdDate;
@@ -35,3 +38,4 @@ public class Token {
     @JoinColumn(name = "userId", nullable = false)
     private User user;
 }
+

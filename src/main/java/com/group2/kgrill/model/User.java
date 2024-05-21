@@ -1,7 +1,6 @@
 package com.group2.kgrill.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.group2.kgrill.enums.Role;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
