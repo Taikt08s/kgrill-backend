@@ -1,12 +1,12 @@
 package com.group2.kgrill.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.UuidGenerator;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -31,7 +31,7 @@ import java.util.UUID;
 public class User implements UserDetails, Principal {
 
     @Id
-    @UuidGenerator(style = UuidGenerator.Style.RANDOM)
+    @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "account_id")
     private UUID userId;
 
@@ -52,9 +52,6 @@ public class User implements UserDetails, Principal {
 
     @Column(name = "phone")
     private String phone;
-
-    @Column(name = "username", unique = true)
-    private String username;
 
     @JsonIgnore
     @Column(name = "password")
@@ -77,7 +74,7 @@ public class User implements UserDetails, Principal {
     @Column(name = "last_modified_date")
     private LocalDateTime lastModifiedDate;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "role_id", nullable = false)
     private Role role;
 
@@ -123,7 +120,7 @@ public class User implements UserDetails, Principal {
         return enable;
     }
 
-    private String fullName() {
+    public String fullName() {
         return firstName + ' ' + lastName;
     }
 }
