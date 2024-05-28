@@ -114,7 +114,6 @@ public class AuthImplement implements AuthService {
     }
 
     @Override
-    @Transactional
     public void activateAccount(String token) throws MessagingException {
         EmailToken savedToken = emailTokenRepository.findByToken(token)
                 .orElseThrow(() -> new RuntimeException("Invalid email token"));
