@@ -13,29 +13,26 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Entity
 @Builder
-@Table(name = "token")
-public class Token {
+@Table(name = "email_token")
+public class EmailToken {
     @Id
     @GeneratedValue
     private Long id;
 
-    @Column(name = "access_token")
-    private String accessToken;
+    @Column(name = "verification_token")
+    private String token;
 
-    @Column(name = "refresh_token")
-    private String refreshToken;
-
-    @Column(name = "created_date", nullable = false, updatable = false)
-    private LocalDateTime createdDate;
+    @Column(name = "created_at")
+    private LocalDateTime createdAt;
 
     @Column(name = "expired_at")
     private LocalDateTime expiredAt;
 
-    @Column(name = "valiadte_at")
+    @Column(name = "validate_at")
     private LocalDateTime validateAt;
 
     @ManyToOne
-    @JoinColumn(name = "userId", nullable = false)
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 }
 
