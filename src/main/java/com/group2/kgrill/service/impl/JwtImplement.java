@@ -18,7 +18,6 @@ import java.util.Map;
 import java.util.function.Function;
 
 @Service
-@RequiredArgsConstructor
 public class JwtImplement implements JwtService {
 
     @Value("${jwt.secret-key}")
