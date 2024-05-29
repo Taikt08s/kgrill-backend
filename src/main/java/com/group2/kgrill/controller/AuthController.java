@@ -1,6 +1,7 @@
 package com.group2.kgrill.controller;
 
 import com.group2.kgrill.dto.AuthenticationRequest;
+import com.group2.kgrill.dto.AuthenticationResponse;
 import com.group2.kgrill.dto.RegistrationRequest;
 import com.group2.kgrill.exception.CustomSuccessHandler;
 import com.group2.kgrill.exception.ExceptionResponse;
@@ -28,8 +29,8 @@ public class AuthController {
 
     @Operation(
             summary = "Register a new account",
-            description = "To register a new account, all information must be filled out and cannot be left blank. " +
-                    "Upon successful registration, the response will include an access token and a refresh token")
+            description = "To register a new account, all information must be filled out completely and cannot be left blank." +
+                    " Upon successful registration, a verification email will be sent to the user's Gmail account.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "202", description = "Successfully Registered"),
             @ApiResponse(responseCode = "400", description = "Validation error",
@@ -58,7 +59,21 @@ public class AuthController {
             description = "Login into the system requires all information to be provided, " +
                     "and validations will be performed. The response will include an access token and a refresh token")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Successfully SignIn"),
+            @ApiResponse(responseCode = "200", description = "Successfully SignIn",
+                    content = @Content(mediaType = "application/json",
+                            schema = @Schema(implementation = AuthenticationResponse.class),
+                            examples = @ExampleObject(value = """
+                                    {
+                                        {
+                                           "message": "Successfully SignIn",
+                                           "httpStatus": 200,
+                                           "timestamp": "05/29/2024 11:20:03",
+                                           "data": {
+                                             "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjp7InJvbGVJZCI6MSwicm9sZU5hbWUiOiJVU0VSIiwiY3JlYXRlZERhdGUiOjE3MTY5MTQ5MTEwMDAsImxhc3RNb2RpZmllZERhdGUiOjE3MTY5MTQ5MTIwMDB9LCJmdWxsTmFtZSI6IkRhbmcgRGluaCBUYWkiLCJzdWIiOiJzdHllbWF0aWNAZ21haWwuY29tIiwiaWF0IjoxNzE2OTU2NDAzLCJleHAiOjE3MTY5NTgyMDMsImF1dGhvcml0aWVzIjpbIlVTRVIiXX0.kbA1vVt5AyocVTX1YCv_oBVuuPdiiiKYEVd-9NzZiPyNS48YTOGGjdIzTotQUkv3wEzGWACjtxKx1tSWOIOHKA",
+                                             "refreshToken": null
+                                           }
+                                         }
+                                    }"""))),
             @ApiResponse(responseCode = "401", description = "Unauthorized")
     })
     @PostMapping("/signin")
