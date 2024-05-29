@@ -10,7 +10,7 @@ import io.swagger.v3.oas.annotations.security.SecuritySchemes;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@OpenAPIDefinition(info = @Info(title = "KGRILL REST API", version = "1.0",
+@OpenAPIDefinition(info = @Info(title = "KGRILL REST API", version = "1.0", description = "API documentation for KGrill food delivery application",
         contact = @Contact(name = "Dang Dinh Tai (Group leader)", email = "styematic@gmail.com")),
         security = {@SecurityRequirement(name = "basicAuth"), @SecurityRequirement(name = "bearerToken")}
 )

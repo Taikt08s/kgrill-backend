@@ -4,6 +4,7 @@ import com.group2.kgrill.dto.AuthenticationRequest;
 import com.group2.kgrill.dto.AuthenticationResponse;
 import com.group2.kgrill.dto.RegistrationRequest;
 import com.group2.kgrill.enums.EmailTemplateName;
+import com.group2.kgrill.exception.ActivationTokenException;
 import com.group2.kgrill.model.EmailToken;
 import com.group2.kgrill.model.User;
 import com.group2.kgrill.repository.EmailTokenRepository;
@@ -13,7 +14,6 @@ import com.group2.kgrill.service.AuthService;
 import com.group2.kgrill.service.EmailService;
 import com.group2.kgrill.service.JwtService;
 import jakarta.mail.MessagingException;
-import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -110,16 +110,17 @@ public class AuthImplement implements AuthService {
         claims.put("role", user.getRole());
         var jwtToken = jwtService.generateToken(claims, user);
         return AuthenticationResponse.builder()
-                .accessToken(jwtToken).build();
+                .accessToken(jwtToken)
+                .build();
     }
 
     @Override
     public void activateAccount(String token) throws MessagingException {
         EmailToken savedToken = emailTokenRepository.findByToken(token)
-                .orElseThrow(() -> new RuntimeException("Invalid email token"));
+                .orElseThrow(() -> new ActivationTokenException("Invalid email token"));
         if (LocalDateTime.now().isAfter(savedToken.getExpiredAt())) {
             sendValidationEmail(savedToken.getUser());
-            throw new RuntimeException("Activation code has expired. A new code have been send to your email address");
+            throw new ActivationTokenException("Activation code has expired. A new code have been send to your email address");
         }
         var user = userRepository.findById(savedToken.getUser().getUserId())
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
