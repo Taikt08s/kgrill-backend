@@ -15,13 +15,13 @@ import lombok.NoArgsConstructor;
 @Table(name = "token")
 public class Token {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "access_token")
+    @Column(name = "access_token",length = 350)
     private String accessToken;
 
-    @Column(name = "refresh_token")
+    @Column(name = "refresh_token",length = 350)
     private String refreshToken;
 
     @Column(name = "token_type")

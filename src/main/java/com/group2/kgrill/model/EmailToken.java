@@ -31,6 +31,9 @@ public class EmailToken {
     @Column(name = "validate_at")
     private LocalDateTime validateAt;
 
+    @Column(name = "revoked_token")
+    private boolean revokedToken;
+
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
