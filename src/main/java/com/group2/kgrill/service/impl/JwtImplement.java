@@ -60,6 +60,8 @@ public class JwtImplement implements JwtService {
                 .stream().map(GrantedAuthority::getAuthority)
                 .toList();
 
+        extraClaims.remove("role");
+
         return Jwts.builder()
                 .claims(extraClaims)
                 .subject(userDetails.getUsername())
