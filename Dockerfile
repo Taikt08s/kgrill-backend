@@ -5,4 +5,4 @@ RUN mvn clean package -DskipTests
 FROM openjdk:17.0.1-jdk-slim
 COPY --from=build target/kgrill-0.0.1-SNAPSHOT.jar Kgrill.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","demo1.jar"]
+ENTRYPOINT ["java","-jar","Kgrill.jar"]
