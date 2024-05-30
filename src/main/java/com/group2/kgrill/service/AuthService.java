@@ -4,7 +4,10 @@ import com.group2.kgrill.dto.AuthenticationRequest;
 import com.group2.kgrill.dto.AuthenticationResponse;
 import com.group2.kgrill.dto.RegistrationRequest;
 import jakarta.mail.MessagingException;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+
+import java.io.IOException;
 
 public interface AuthService {
     void register(RegistrationRequest request) throws MessagingException;
@@ -12,4 +15,6 @@ public interface AuthService {
     AuthenticationResponse authenticate(AuthenticationRequest request);
 
     void activateAccount(String token, HttpServletResponse response) throws MessagingException;
+
+    void refreshToken(HttpServletRequest request, HttpServletResponse response) throws IOException;
 }

@@ -1,5 +1,6 @@
 package com.group2.kgrill.service.impl;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.group2.kgrill.config.LogoutServiceConfig;
 import com.group2.kgrill.dto.AuthenticationRequest;
 import com.group2.kgrill.dto.AuthenticationResponse;
@@ -17,13 +18,17 @@ import com.group2.kgrill.repository.UserRepository;
 import com.group2.kgrill.service.AuthService;
 import com.group2.kgrill.service.EmailService;
 import com.group2.kgrill.service.JwtService;
+import com.group2.kgrill.util.DateUtil;
 import jakarta.mail.MessagingException;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -33,6 +38,7 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.security.SecureRandom;
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.HashMap;
 
 @Service
@@ -64,7 +70,7 @@ public class AuthImplement implements AuthService {
                 .address(request.getAddress())
                 .phone(request.getPhone())
                 .password(passwordEncoder.encode(request.getPassword()))
-                .accountLocked(false)
+                .accountNotLocked(true)
                 .enable(false)
                 .role(userRole)
                 .build();
@@ -179,7 +185,6 @@ public class AuthImplement implements AuthService {
             throw new ActivationTokenException("Activation code has expired. A new code has been sent to your email address");
         }
 
-
         var user = userRepository.findById(savedToken.getUser().getUserId())
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
         user.setEnable(true);
@@ -196,5 +201,60 @@ public class AuthImplement implements AuthService {
             logger.error("Error writing error response", e);
         }
 
+    }
+
+    @Override
+    public void refreshToken(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        final String authHeader = checkInputToken(request, response);
+        if (authHeader == null) return;
+        final String refreshedToken;
+        final String username;
+        refreshedToken = authHeader.substring(7);
+        username = jwtService.extractUsername(refreshedToken);
+
+        final Token currentRefreshedToken = tokenRepository.findByRefreshTokenAndRevokedFalseAndExpiredFalse(refreshedToken).get();
+
+        if (username != null) {
+            var user = this.userRepository.findByEmail(username)
+                    .orElseThrow();
+            if ((jwtService.isTokenValid(refreshedToken, user))
+                    && !currentRefreshedToken.isRevoked() && !currentRefreshedToken.isExpired()) {
+                var accessToken = jwtService.generateToken(user);
+                var authResponse = AuthenticationResponse.builder()
+                        .accessToken(accessToken)
+                        .refreshToken(refreshedToken)
+                        .build();
+
+                revokeAllUserToken(user);
+                saveUserToken(user, accessToken, refreshedToken);
+
+                response.setStatus(HttpStatus.OK.value());
+                response.setContentType("application/json");
+                new ObjectMapper().writeValue(response.getOutputStream(), authResponse);
+            } else {
+                response.setStatus(HttpStatus.UNAUTHORIZED.value());
+                response.setContentType("text/plain");
+                try {
+                    response.getWriter().write("JWT token has expired and revoked");
+                } catch (IOException e) {
+                    logger.error("Error writing unauthorized response", e);
+                }
+            }
+        }
+    }
+
+    private static String checkInputToken(HttpServletRequest request, HttpServletResponse response) {
+        final String authHeader = request.getHeader(HttpHeaders.AUTHORIZATION);
+        if (authHeader == null || !authHeader.startsWith("Bearer ")) {
+            response.setStatus(HttpStatus.UNAUTHORIZED.value());
+            response.setContentType("text/plain");
+            try {
+                response.getWriter().write("No JWT token found in the request header");
+            } catch (IOException e) {
+                logger.error("Error writing unauthorized response", e);
+            }
+            return null;
+        }
+        return authHeader;
     }
 }

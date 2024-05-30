@@ -55,8 +55,8 @@ public class User implements UserDetails, Principal {
     @Column(name = "profile_picture")
     private String profilePic;
 
-    @Column(name = "account_locked")
-    private boolean accountLocked;
+    @Column(name = "account_not_locked")
+    private boolean accountNotLocked;
 
     @Column(name = "is_enable")
     private boolean enable;
@@ -102,7 +102,7 @@ public class User implements UserDetails, Principal {
 
     @Override
     public boolean isAccountNonLocked() {
-        return true;
+        return accountNotLocked;
     }
 
     @Override

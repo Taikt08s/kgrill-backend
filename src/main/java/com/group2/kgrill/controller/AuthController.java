@@ -2,7 +2,6 @@ package com.group2.kgrill.controller;
 
 import com.group2.kgrill.config.LogoutServiceConfig;
 import com.group2.kgrill.dto.AuthenticationRequest;
-import com.group2.kgrill.dto.AuthenticationResponse;
 import com.group2.kgrill.dto.RegistrationRequest;
 import com.group2.kgrill.exception.CustomSuccessHandler;
 import com.group2.kgrill.exception.ExceptionResponse;
@@ -23,6 +22,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
+
+import java.io.IOException;
 
 @RestController
 @RequestMapping("auth")
@@ -77,7 +78,7 @@ public class AuthController {
                             examples = @ExampleObject(value = """
                                         {
                                            "httpStatus": 200,
-                                           "timestamp": "05/29/2024 11:20:03",
+                                           "timestamp": "10/29/2024 11:20:03",
                                            "message": "Successfully SignIn",
                                            "data": {
                                              "accessToken": "xxxx.yyyy.zzzz",
@@ -93,12 +94,21 @@ public class AuthController {
                                          "message": "Email or Password is incorrect"
                                        }
                                     """))),
-            @ApiResponse(responseCode = "451", description = "Account Locked",
+            @ApiResponse(responseCode = "401", description = "Account Locked",
                     content = @Content(
                             examples = @ExampleObject(value = """
                                         {
                                          "httpStatus": 401,
                                          "timestamp": "05/29/2024 21:24:57",
+                                         "message": "Account is locked please contact administrator for more information"
+                                       }
+                                    """))),
+            @ApiResponse(responseCode = "401", description = "Account Disabled",
+                    content = @Content(
+                            examples = @ExampleObject(value = """
+                                        {
+                                         "httpStatus": 401,
+                                         "timestamp": "05/26/2024 21:24:57",
                                          "message": "Account is disabled please contact administrator for more information"
                                        }
                                     """))),
@@ -114,8 +124,11 @@ public class AuthController {
             description = "After registering successfully, the user will need to enter the 6-digit confirmation code sent " +
                     "to their email to activate the account.")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Email Verification Successfully"),
-            @ApiResponse(responseCode = "400", description = "Email Verification Failed")
+            @ApiResponse(responseCode = "200", description = "Account verification successfully"),
+            @ApiResponse(responseCode = "400", description = "Account Verification Failed"),
+            @ApiResponse(responseCode = "400", description = "Your account is already activated"),
+            @ApiResponse(responseCode = "400", description = "This activation code is invalid as it has been revoked. Please use the latest activation code sent to your email."),
+            @ApiResponse(responseCode = "400", description = "Activation code has expired. A new code has been sent to your email address"),
     })
     @PostMapping("/activate-account")
     @ResponseStatus(HttpStatus.OK)
@@ -125,10 +138,35 @@ public class AuthController {
 
     @Operation(
             summary = "Logout of the system",
-            description = "Logout of the system, bearer is required",
-            tags = {"Authentication"})
+            description = "Logout of the system, bearer token (refresh token) is required")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Logged out successfully"),
+            @ApiResponse(responseCode = "401", description = "No JWT token found in the request header")
+    })
     @PostMapping("/logout")
+    @ResponseStatus(HttpStatus.OK)
     public void logout(HttpServletRequest request, HttpServletResponse response, Authentication authentication) {
         logoutServiceConfig.logout(request, response, authentication);
+    }
+
+    @Operation(
+            summary = "Refresh token if expired",
+            description = "If the current JWT Refresh Token has expired or been revoked, you can refresh it using this method")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Generate new Refresh Token and Access Token successfully",
+                    content = @Content(
+                            examples = @ExampleObject(value = """
+                                        {
+                                         "accessToken": "xxxx.yyyy.zzzz",
+                                         "refreshToken": "xxxx.yyyy.zzzz"
+                                       }
+                                    """))),
+            @ApiResponse(responseCode = "401", description = "No JWT token found in the request header"),
+            @ApiResponse(responseCode = "401", description = "JWT token has expired and revoked")
+    })
+    @PostMapping("/refresh-token")
+
+    public void refreshToken(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        authService.refreshToken(request, response);
     }
 }
