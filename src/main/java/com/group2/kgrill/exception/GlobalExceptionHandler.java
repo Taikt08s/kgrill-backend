@@ -20,10 +20,10 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(LockedException.class)
     public ResponseEntity<ExceptionResponse> handlerException(LockedException exception) {
         return ResponseEntity
-                .status(HttpStatus.UNAVAILABLE_FOR_LEGAL_REASONS)
+                .status(HttpStatus.UNAUTHORIZED)
                 .body(
                         ExceptionResponse.builder()
-                                .httpStatus(HttpStatus.UNAVAILABLE_FOR_LEGAL_REASONS.value())
+                                .httpStatus(ACCOUNT_LOCKED.getCode())
                                 .timestamp(DateUtil.formatTimestamp(new Date()))
                                 .message(ACCOUNT_LOCKED.getDescription())
                                 .build()
@@ -42,7 +42,6 @@ public class GlobalExceptionHandler {
                                 .build()
                 );
     }
-
 
     @ExceptionHandler(BadCredentialsException.class)
     public ResponseEntity<ExceptionResponse> handleException() {

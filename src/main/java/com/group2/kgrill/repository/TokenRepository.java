@@ -9,11 +9,11 @@ import java.util.Optional;
 import java.util.UUID;
 
 public interface TokenRepository extends JpaRepository<Token, Long> {
-    @Query("SELECT t from Token t inner join User u on t.user.userId=u.userId " +
-            "where u.userId= :userId and (t.expired =false AND t.revoked =false)")
+    @Query("SELECT t FROM Token t WHERE t.user.userId = :userId AND t.expired = false AND t.revoked = false")
     List<Token> findAllValidTokensByUser(UUID userId);
 
     Optional<Token> findByAccessToken(String token);
 
-    Optional<Token> findByRefreshToken(String refreshToken);
+    Optional<Token> findByRefreshTokenAndRevokedFalseAndExpiredFalse(String refreshToken);
+
 }
