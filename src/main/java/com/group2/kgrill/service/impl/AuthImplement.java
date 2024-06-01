@@ -57,7 +57,9 @@ public class AuthImplement implements AuthService {
     private String activationUrl;
     @Value("${application.mail.secure.characters}")
     private String emailSecureCharacter;
+
     private static final Logger logger = LoggerFactory.getLogger(LogoutServiceConfig.class);
+
 
     @Override
     public void register(RegistrationRequest request) throws MessagingException {
@@ -189,6 +191,7 @@ public class AuthImplement implements AuthService {
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
         user.setEnable(true);
         userRepository.save(user);
+
         savedToken.setRevokedToken(true);
         savedToken.setValidateAt(LocalDateTime.now());
         emailTokenRepository.save(savedToken);

@@ -72,6 +72,16 @@ public class User implements UserDetails, Principal {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "role_id", nullable = false)
     private Role role;
+   
+    @OneToOne
+    @JoinColumn(name = "current_order_id")
+    private DeliveryOrder currentOrder;
+
+    @OneToMany(mappedBy = "account")
+    private List<DeliveryOrder> orders;
+
+    @OneToMany(mappedBy = "account")
+    private List<Feedback> feedbacks;
 
     @Override
     public String getName() {
