@@ -6,6 +6,7 @@ import com.group2.kgrill.dto.RegistrationRequest;
 import jakarta.mail.MessagingException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+
 import java.io.IOException;
 
 public interface AuthService {
