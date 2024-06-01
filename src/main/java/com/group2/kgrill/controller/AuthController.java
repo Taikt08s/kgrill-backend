@@ -22,15 +22,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
+
 import java.io.IOException;
 
 @RestController
 @RequestMapping("auth")
 @RequiredArgsConstructor
-@Tag(name = "Authentication")
+@Tag(name = "Authentication",description = "Authentication required to use other resources.")
 public class AuthController {
     private final AuthService authService;
-
     private final LogoutServiceConfig logoutServiceConfig;
 
     @Operation(
