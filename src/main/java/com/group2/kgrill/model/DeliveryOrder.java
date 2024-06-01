@@ -1,10 +1,10 @@
 package com.group2.kgrill.model;
 
-import lombok.Data;
 import jakarta.persistence.*;
+import lombok.Data;
+
 import java.util.Date;
 import java.util.List;
-import java.util.UUID;
 
 @Data
 @Entity
@@ -34,6 +34,7 @@ public class DeliveryOrder {
     private Shipper shipper;
 
     @OneToMany(mappedBy = "order")
+    @Column(name = "order_details")
     private List<OrderDetail> orderDetails;
 
     @OneToOne(mappedBy = "currentOrder")

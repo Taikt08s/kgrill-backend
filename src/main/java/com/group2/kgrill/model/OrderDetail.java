@@ -2,6 +2,7 @@ package com.group2.kgrill.model;
 
 import lombok.Data;
 import jakarta.persistence.*;
+
 import java.util.List;
 
 @Data
@@ -10,7 +11,9 @@ public class OrderDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     private Integer quantity;
+
     private Float comboPrice;
 
     @ManyToOne

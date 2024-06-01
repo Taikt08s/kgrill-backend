@@ -78,6 +78,16 @@ public class User implements UserDetails, Principal {
     @JoinColumn(name = "role_id", nullable = false)
     private Role role;
 
+    @OneToOne
+    @JoinColumn(name = "current_order_id")
+    private DeliveryOrder currentOrder;
+
+    @OneToMany(mappedBy = "account")
+    private List<DeliveryOrder> orders;
+
+    @OneToMany(mappedBy = "account")
+    private List<Feedback> feedbacks;
+
     public String getRoleName() {
         return role.getRoleName();
     }
