@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+
 @Schema(description = "Response object for user sign in")
 public class AuthenticationResponse {
     @Schema(description = "Access Token", example = "xxx.yyy.zzz")
