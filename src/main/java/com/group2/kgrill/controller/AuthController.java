@@ -28,7 +28,7 @@ import java.io.IOException;
 @RestController
 @RequestMapping("auth")
 @RequiredArgsConstructor
-@Tag(name = "Authentication")
+@Tag(name = "Authentication",description = "Authentication required to use other resources.")
 public class AuthController {
     private final AuthService authService;
 
