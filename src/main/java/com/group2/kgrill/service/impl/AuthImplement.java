@@ -18,7 +18,6 @@ import com.group2.kgrill.repository.UserRepository;
 import com.group2.kgrill.service.AuthService;
 import com.group2.kgrill.service.EmailService;
 import com.group2.kgrill.service.JwtService;
-import com.group2.kgrill.util.DateUtil;
 import jakarta.mail.MessagingException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -28,7 +27,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -38,7 +36,6 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.security.SecureRandom;
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.HashMap;
 
 @Service
@@ -57,9 +54,7 @@ public class AuthImplement implements AuthService {
     private String activationUrl;
     @Value("${application.mail.secure.characters}")
     private String emailSecureCharacter;
-
     private static final Logger logger = LoggerFactory.getLogger(LogoutServiceConfig.class);
-
 
     @Override
     public void register(RegistrationRequest request) throws MessagingException {
@@ -191,7 +186,6 @@ public class AuthImplement implements AuthService {
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
         user.setEnable(true);
         userRepository.save(user);
-
         savedToken.setRevokedToken(true);
         savedToken.setValidateAt(LocalDateTime.now());
         emailTokenRepository.save(savedToken);

@@ -55,39 +55,40 @@ public class User implements UserDetails, Principal {
     @Column(name = "profile_picture")
     private String profilePic;
 
+    @JsonIgnore
     @Column(name = "account_not_locked")
     private boolean accountNotLocked;
 
+    @JsonIgnore
     @Column(name = "is_enable")
     private boolean enable;
 
+    @JsonIgnore
     @CreatedDate
     @Column(name = "created_date", nullable = false, updatable = false)
     private Date createdDate;
 
+    @JsonIgnore
     @LastModifiedDate
     @Column(name = "last_modified_date")
     private Date lastModifiedDate;
 
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "role_id", nullable = false)
     private Role role;
-   
-    @OneToOne
-    @JoinColumn(name = "current_order_id")
-    private DeliveryOrder currentOrder;
 
-    @OneToMany(mappedBy = "account")
-    private List<DeliveryOrder> orders;
+    public String getRoleName() {
+        return role.getRoleName();
+    }
 
-    @OneToMany(mappedBy = "account")
-    private List<Feedback> feedbacks;
-
+    @JsonIgnore
     @Override
     public String getName() {
         return email;
     }
 
+    @JsonIgnore
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         List<SimpleGrantedAuthority> authorities = new ArrayList<>();
@@ -95,37 +96,45 @@ public class User implements UserDetails, Principal {
         return authorities;
     }
 
+    @JsonIgnore
     @Override
     public String getPassword() {
         return password;
     }
 
+    @JsonIgnore
     @Override
     public String getUsername() {
         return email;
     }
 
+    @JsonIgnore
     @Override
     public boolean isAccountNonExpired() {
         return true;
     }
 
+    @JsonIgnore
     @Override
     public boolean isAccountNonLocked() {
         return accountNotLocked;
     }
 
+    @JsonIgnore
     @Override
     public boolean isCredentialsNonExpired() {
         return true;
     }
 
+    @JsonIgnore
     @Override
     public boolean isEnabled() {
         return enable;
     }
 
+    @JsonIgnore
     public String fullName() {
         return firstName + ' ' + lastName;
     }
+
 }
