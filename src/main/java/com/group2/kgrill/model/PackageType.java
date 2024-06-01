@@ -10,5 +10,6 @@ public class PackageType {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
+    @Column(name = "meal_type")
     private String mealType;
 }

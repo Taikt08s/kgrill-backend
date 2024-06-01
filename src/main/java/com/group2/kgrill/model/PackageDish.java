@@ -9,6 +9,7 @@ public class PackageDish {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @Column(name = "dish_price")
     private Float dishPrice;
     private Integer quantity;
 
