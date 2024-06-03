@@ -1,6 +1,7 @@
 package com.group2.kgrill.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.group2.kgrill.enums.AuthenticationProvider;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -63,6 +64,9 @@ public class User implements UserDetails, Principal {
     @Column(name = "is_enable")
     private boolean enable;
 
+    @Column(name = "oauth_provider", length = 15)
+    private AuthenticationProvider authProvider;
+
     @JsonIgnore
     @CreatedDate
     @Column(name = "created_date", nullable = false, updatable = false)
@@ -78,13 +82,16 @@ public class User implements UserDetails, Principal {
     @JoinColumn(name = "role_id", nullable = false)
     private Role role;
 
+    @JsonIgnore
     @OneToOne
     @JoinColumn(name = "current_order_id")
     private DeliveryOrder currentOrder;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "account")
     private List<DeliveryOrder> orders;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "account")
     private List<Feedback> feedbacks;
 

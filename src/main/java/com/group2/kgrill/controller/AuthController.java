@@ -2,6 +2,7 @@ package com.group2.kgrill.controller;
 
 import com.group2.kgrill.config.LogoutServiceConfig;
 import com.group2.kgrill.dto.AuthenticationRequest;
+import com.group2.kgrill.dto.GoogleAuthenticationRequest;
 import com.group2.kgrill.dto.RegistrationRequest;
 import com.group2.kgrill.exception.CustomSuccessHandler;
 import com.group2.kgrill.exception.ExceptionResponse;
@@ -28,11 +29,12 @@ import java.io.IOException;
 @RestController
 @RequestMapping("auth")
 @RequiredArgsConstructor
-@Tag(name = "Authentication",description = "Authentication required to use other resources.")
+@Tag(name = "Authentication", description = "Authentication required to use other resources.")
 public class AuthController {
     private final AuthService authService;
 
     private final LogoutServiceConfig logoutServiceConfig;
+
 
     @Operation(
             summary = "Register a new account",
@@ -166,8 +168,59 @@ public class AuthController {
             @ApiResponse(responseCode = "401", description = "JWT token has expired and revoked")
     })
     @PostMapping("/refresh-token")
-
+    @ResponseStatus(HttpStatus.OK)
     public void refreshToken(HttpServletRequest request, HttpServletResponse response) throws IOException {
         authService.refreshToken(request, response);
+    }
+
+    @Operation(
+            summary = "Social Login in to the system using Google",
+            description = "Login into the system using Google. The response will include an access token and a refresh token")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Successfully Register",
+                    content = @Content(
+                            examples = @ExampleObject(value = """
+                                        {
+                                           "httpStatus": 200,
+                                           "timestamp": "10/29/2024 11:20:03",
+                                           "message": "Successfully SignIn",
+                                           "data": {
+                                             "accessToken": "xxxx.yyyy.zzzz",
+                                             "refreshToken": "xxxx.yyyy.zzzz"
+                                        }
+                                    """))),
+            @ApiResponse(responseCode = "401", description = "Unauthorized",
+                    content = @Content(
+                            examples = @ExampleObject(value = """
+                                        {
+                                         "httpStatus": 401,
+                                         "timestamp": "05/29/2024 21:24:57",
+                                         "message": "Email or Password is incorrect"
+                                       }
+                                    """))),
+            @ApiResponse(responseCode = "401", description = "Account Locked",
+                    content = @Content(
+                            examples = @ExampleObject(value = """
+                                        {
+                                         "httpStatus": 401,
+                                         "timestamp": "05/29/2024 21:24:57",
+                                         "message": "Account is locked please contact administrator for more information"
+                                       }
+                                    """))),
+            @ApiResponse(responseCode = "401", description = "Account Disabled",
+                    content = @Content(
+                            examples = @ExampleObject(value = """
+                                        {
+                                         "httpStatus": 401,
+                                         "timestamp": "05/26/2024 21:24:57",
+                                         "message": "Account is disabled please contact administrator for more information"
+                                       }
+                                    """))),
+    })
+    @PostMapping("/google-signin")
+    @CrossOrigin(origins = "*")
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<?> googleSignIn(@RequestBody GoogleAuthenticationRequest request) {
+        return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Successfully SignIn", authService.findOrCreateUser(request));
     }
 }

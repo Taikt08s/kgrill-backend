@@ -1,7 +1,9 @@
 package com.group2.kgrill.service.impl;
 
+import com.group2.kgrill.dto.UserProfileDto;
 import com.group2.kgrill.exception.CustomSuccessHandler;
 import com.group2.kgrill.model.Token;
+import com.group2.kgrill.model.User;
 import com.group2.kgrill.repository.TokenRepository;
 import com.group2.kgrill.repository.UserRepository;
 import com.group2.kgrill.service.JwtService;
@@ -12,6 +14,8 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+
+import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
@@ -47,5 +51,34 @@ public class UserImplement implements UserService {
             return authHeader.substring(7);
         }
         return null;
+    }
+
+    @Override
+    public UserProfileDto updateUserInformation(UUID id, UserProfileDto userProfileDto) {
+        User user = userRepository.findById(id).orElse(null);
+        if (user != null) {
+            user.setFirstName(userProfileDto.getFirstName());
+            user.setLastName(userProfileDto.getLastName());
+            user.setAddress(userProfileDto.getAddress());
+            user.setGender(userProfileDto.getGender());
+            user.setPhone(userProfileDto.getPhone());
+
+            User updateUser = userRepository.save(user);
+            return mapToUserProfileDto(updateUser);
+        } else {
+            return null;
+        }
+    }
+
+    private UserProfileDto mapToUserProfileDto(User user) {
+        UserProfileDto userProfileDto = new UserProfileDto();
+        userProfileDto.setId(user.getUserId());
+        userProfileDto.setFirstName(user.getFirstName());
+        userProfileDto.setLastName(user.getLastName());
+        userProfileDto.setAddress(user.getAddress());
+        userProfileDto.setGender(user.getGender());
+        userProfileDto.setPhone(userProfileDto.getPhone());
+
+        return userProfileDto;
     }
 }

@@ -4,7 +4,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.group2.kgrill.config.LogoutServiceConfig;
 import com.group2.kgrill.dto.AuthenticationRequest;
 import com.group2.kgrill.dto.AuthenticationResponse;
+import com.group2.kgrill.dto.GoogleAuthenticationRequest;
 import com.group2.kgrill.dto.RegistrationRequest;
+import com.group2.kgrill.enums.AuthenticationProvider;
 import com.group2.kgrill.enums.EmailTemplateName;
 import com.group2.kgrill.enums.TokenType;
 import com.group2.kgrill.exception.ActivationTokenException;
@@ -70,6 +72,7 @@ public class AuthImplement implements AuthService {
                 .accountNotLocked(true)
                 .enable(false)
                 .role(userRole)
+                .authProvider(AuthenticationProvider.LOCAL)
                 .build();
         userRepository.save(user);
         sendValidationEmail(user);
@@ -135,7 +138,6 @@ public class AuthImplement implements AuthService {
         var user = ((User) auth.getPrincipal());
 
         claims.put("fullName", user.fullName());
-        claims.put("role", user.getRole());
 
         var jwtAccessToken = jwtService.generateToken(claims, user);
         var jwtRefreshToken = jwtService.generateRefreshToken(user);
@@ -253,5 +255,49 @@ public class AuthImplement implements AuthService {
             return null;
         }
         return authHeader;
+    }
+
+    @Override
+    public AuthenticationResponse findOrCreateUser(GoogleAuthenticationRequest request) {
+        var userRole = roleRepository.findByRoleName("USER")
+                .orElseThrow(() -> new IllegalStateException("ROLE USER was not initialized"));
+        var optionalUser = userRepository.findByEmail(request.getEmail());
+        User user = new User();
+        if (optionalUser.isEmpty()) {
+            user.setFirstName(request.getFirstName());
+            user.setLastName(request.getLastName());
+            user.setEmail(request.getEmail());
+            user.setRole(userRole);
+            user.setProfilePic(request.getPhotoUrl());
+            user.setEnable(true);
+            user.setAccountNotLocked(true);
+            user.setAuthProvider(AuthenticationProvider.GOOGLE);
+            userRepository.save(user);
+        } else {
+            user = optionalUser.get();
+            user.setFirstName(request.getFirstName());
+            user.setLastName(request.getLastName());
+            user.setEmail(request.getEmail());
+            if (user.getProfilePic() == null || !user.getProfilePic().equals(request.getPhotoUrl())) {
+                user.setProfilePic(request.getPhotoUrl());
+                userRepository.save(user);
+            }
+        }
+        var extraClaimsGoogle = new HashMap<String, Object>();
+        extraClaimsGoogle.put("fullName", user.fullName());
+
+        String jwtAccessToken = jwtService.generateToken(extraClaimsGoogle, user);
+        String jwtRefreshToken = jwtService.generateRefreshToken(user);
+
+        logger.info(jwtAccessToken);
+        logger.info(jwtRefreshToken);
+
+        revokeAllUserToken(user);
+        saveUserToken(user, jwtAccessToken, jwtRefreshToken);
+
+        return AuthenticationResponse.builder()
+                .accessToken(jwtAccessToken)
+                .refreshToken(jwtRefreshToken)
+                .build();
     }
 }
