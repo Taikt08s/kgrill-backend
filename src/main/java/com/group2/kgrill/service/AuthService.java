@@ -2,6 +2,7 @@ package com.group2.kgrill.service;
 
 import com.group2.kgrill.dto.AuthenticationRequest;
 import com.group2.kgrill.dto.AuthenticationResponse;
+import com.group2.kgrill.dto.GoogleAuthenticationRequest;
 import com.group2.kgrill.dto.RegistrationRequest;
 import jakarta.mail.MessagingException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -17,4 +18,6 @@ public interface AuthService {
     void activateAccount(String token, HttpServletResponse response) throws MessagingException;
 
     void refreshToken(HttpServletRequest request, HttpServletResponse response) throws IOException;
+
+    AuthenticationResponse findOrCreateUser(GoogleAuthenticationRequest request);
 }
