@@ -76,7 +76,7 @@ public class AuthController {
             description = "Login into the system requires all information to be provided, " +
                     "and validations will be performed. The response will include an access token and a refresh token")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Successfully Register",
+            @ApiResponse(responseCode = "200", description = "Successfully SignIn",
                     content = @Content(
                             examples = @ExampleObject(value = """
                                         {
@@ -177,26 +177,17 @@ public class AuthController {
             summary = "Social Login in to the system using Google",
             description = "Login into the system using Google. The response will include an access token and a refresh token")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Successfully Register",
+            @ApiResponse(responseCode = "200", description = "Successfully SignIn with Google",
                     content = @Content(
                             examples = @ExampleObject(value = """
                                         {
                                            "httpStatus": 200,
                                            "timestamp": "10/29/2024 11:20:03",
-                                           "message": "Successfully SignIn",
+                                           "message": "Successfully SignIn with Google",
                                            "data": {
                                              "accessToken": "xxxx.yyyy.zzzz",
                                              "refreshToken": "xxxx.yyyy.zzzz"
                                         }
-                                    """))),
-            @ApiResponse(responseCode = "401", description = "Unauthorized",
-                    content = @Content(
-                            examples = @ExampleObject(value = """
-                                        {
-                                         "httpStatus": 401,
-                                         "timestamp": "05/29/2024 21:24:57",
-                                         "message": "Email or Password is incorrect"
-                                       }
                                     """))),
             @ApiResponse(responseCode = "401", description = "Account Locked",
                     content = @Content(
@@ -221,6 +212,6 @@ public class AuthController {
     @CrossOrigin(origins = "*")
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<?> googleSignIn(@RequestBody GoogleAuthenticationRequest request) {
-        return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Successfully SignIn", authService.findOrCreateUser(request));
+        return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Successfully SignIn with Google", authService.findOrCreateUser(request));
     }
 }
