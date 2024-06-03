@@ -10,4 +10,6 @@ public interface UserService {
     ResponseEntity<Object> getUserInformation(HttpServletRequest request);
 
     UserProfileDto updateUserInformation(UUID id, UserProfileDto userProfileDto);
+
+    void updateUserProfilePicture(UUID id, String profilePictureUrl);
 }

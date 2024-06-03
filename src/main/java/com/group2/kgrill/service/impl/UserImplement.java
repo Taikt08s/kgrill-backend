@@ -70,6 +70,16 @@ public class UserImplement implements UserService {
         }
     }
 
+    @Override
+    public void updateUserProfilePicture(UUID id, String profilePictureUrl) {
+        User user = userRepository.findById(id).orElse(null);
+        if (user != null) {
+            user.setProfilePic(profilePictureUrl);
+            User updatedUser = userRepository.save(user);
+            mapToUserProfileDto(updatedUser);
+        }
+    }
+
     private UserProfileDto mapToUserProfileDto(User user) {
         UserProfileDto userProfileDto = new UserProfileDto();
         userProfileDto.setId(user.getUserId());
