@@ -27,6 +27,6 @@ public class GoogleAuthenticationRequest {
     @Schema(description = "Google user unique ID", example = "1022939488858")
     @NotBlank(message = "ID cannot be blank")
     private String id;
-    @Schema(description = "Google user photo", example = "1022939488858")
+    @Schema(description = "Google user photo", example = "http://res.cloudinary.com/torikago/image/upload/vxxx/image.jpg")
     private String photoUrl;
 }
