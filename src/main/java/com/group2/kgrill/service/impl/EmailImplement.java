@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
 import org.thymeleaf.context.Context;
 import org.thymeleaf.spring6.SpringTemplateEngine;
 
-import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
@@ -31,8 +30,7 @@ public class EmailImplement implements EmailService {
             String confirmationUrl,
             String activationCode,
             String subject
-    ) throws MessagingException, UnsupportedEncodingException {
-        String senderName = "Customer Service Team at KGrill";
+    ) throws MessagingException {
         String templateName;
         if (emailTemplateName == null) {
             templateName = "confirm-email";
@@ -54,7 +52,7 @@ public class EmailImplement implements EmailService {
         Context context = new Context();
         context.setVariables(properties);
 
-        helper.setFrom("kgrill.customerservice@gmail.com",senderName);
+        helper.setFrom("styematic@gmail.com");
         helper.setTo(to);
         helper.setSubject(subject);
 

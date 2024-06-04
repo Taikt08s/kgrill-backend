@@ -9,14 +9,13 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 
 public interface AuthService {
-    void register(RegistrationRequest request) throws MessagingException, UnsupportedEncodingException;
+    void register(RegistrationRequest request) throws MessagingException;
 
     AuthenticationResponse authenticate(AuthenticationRequest request);
 
-    void activateAccount(String token, HttpServletResponse response) throws MessagingException, UnsupportedEncodingException;
+    void activateAccount(String token, HttpServletResponse response) throws MessagingException;
 
     void refreshToken(HttpServletRequest request, HttpServletResponse response) throws IOException;
 

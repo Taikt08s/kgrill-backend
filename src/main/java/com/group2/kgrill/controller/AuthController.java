@@ -25,7 +25,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 
 @RestController
 @RequestMapping("auth")
@@ -67,7 +66,7 @@ public class AuthController {
     })
     @PostMapping("/register")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public ResponseEntity<Object> register(@RequestBody @Valid RegistrationRequest request) throws MessagingException, UnsupportedEncodingException {
+    public ResponseEntity<Object> register(@RequestBody @Valid RegistrationRequest request) throws MessagingException {
         authService.register(request);
         return CustomSuccessHandler.responseBuilder(HttpStatus.ACCEPTED, "Successfully Register", "Please check your email for account verification.");
     }
@@ -136,7 +135,7 @@ public class AuthController {
     })
     @PostMapping("/activate-account")
     @ResponseStatus(HttpStatus.OK)
-    public void accountConfirmation(@RequestParam String token, HttpServletResponse response) throws MessagingException, UnsupportedEncodingException {
+    public void accountConfirmation(@RequestParam String token, HttpServletResponse response) throws MessagingException {
         authService.activateAccount(token, response);
     }
 

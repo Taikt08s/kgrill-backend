@@ -36,7 +36,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.security.SecureRandom;
 import java.time.LocalDateTime;
 import java.util.HashMap;
@@ -60,7 +59,7 @@ public class AuthImplement implements AuthService {
     private static final Logger logger = LoggerFactory.getLogger(LogoutServiceConfig.class);
 
     @Override
-    public void register(RegistrationRequest request) throws MessagingException, UnsupportedEncodingException {
+    public void register(RegistrationRequest request) throws MessagingException {
         var userRole = roleRepository.findByRoleName("USER")
                 .orElseThrow(() -> new IllegalStateException("ROLE USER was not initialized"));
         var user = User.builder()
@@ -79,7 +78,7 @@ public class AuthImplement implements AuthService {
         sendValidationEmail(user);
     }
 
-    private void sendValidationEmail(User user) throws MessagingException, UnsupportedEncodingException {
+    private void sendValidationEmail(User user) throws MessagingException {
         var newToken = generateAndSaveActivationToken(user);
         emailService.sendEmail(
                 user.getEmail(),
@@ -165,7 +164,7 @@ public class AuthImplement implements AuthService {
     }
 
     @Override
-    public void activateAccount(String token, HttpServletResponse response) throws MessagingException, UnsupportedEncodingException {
+    public void activateAccount(String token, HttpServletResponse response) throws MessagingException {
 
         EmailToken savedToken = emailTokenRepository.findByToken(token)
                 .orElseThrow(() -> new ActivationTokenException("Invalid email token"));
