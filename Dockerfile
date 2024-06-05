@@ -1,4 +1,8 @@
 FROM maven:3.8.5-openjdk-17 AS build
+
+# Copy the Maven settings file
+COPY settings.xml /root/.m2/settings.xml
+
 COPY . .
 RUN mvn clean package -DskipTests
 

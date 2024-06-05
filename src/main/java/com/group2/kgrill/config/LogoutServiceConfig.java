@@ -20,7 +20,7 @@ public class LogoutServiceConfig implements LogoutHandler {
 
     private static final Logger logger = LoggerFactory.getLogger(LogoutServiceConfig.class);
 
-    private final TokenRepository tokenRepository;
+    private final  TokenRepository tokenRepository;
 
     @Override
     public void logout(HttpServletRequest request, HttpServletResponse response, Authentication authentication) {
