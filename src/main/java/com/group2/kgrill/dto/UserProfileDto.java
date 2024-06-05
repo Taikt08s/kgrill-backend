@@ -1,6 +1,7 @@
 package com.group2.kgrill.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -23,10 +24,12 @@ public class UserProfileDto {
 
     @Schema(description = "User's first name", example = "Dang Dinh")
     @NotBlank(message = "First name cannot be blank")
+    @JsonProperty("first-name")
     private String firstName;
 
     @Schema(description = "User's last name", example = "Tai")
     @NotBlank(message = "Last name cannot be blank")
+    @JsonProperty("last-name")
     private String lastName;
 
     @Schema(description = "User's address", example = "123 Main St, Springfield")

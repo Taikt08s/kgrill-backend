@@ -1,6 +1,8 @@
 package com.group2.kgrill.config;
 
-import com.group2.kgrill.repository.UserRepository;
+
+
+import com.swd392.group2.kgrill_model.repository.UserRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -17,6 +19,6 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Override
     @Transactional
     public UserDetails loadUserByUsername(String userEmail) throws UsernameNotFoundException {
-        return userRepository.findByEmail(userEmail).orElseThrow(()-> new UsernameNotFoundException("User not found"));
+        return userRepository.findByEmail(userEmail).orElseThrow(() -> new UsernameNotFoundException("User not found"));
     }
 }

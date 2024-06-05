@@ -14,11 +14,11 @@ import lombok.NoArgsConstructor;
 @Schema(description = "Response object for user sign in")
 public class AuthenticationResponse {
     @Schema(description = "Access Token", example = "xxx.yyy.zzz")
-    @JsonProperty("accessToken")
+    @JsonProperty("access-token")
     private String accessToken;
 
     @Schema(description = "Refresh Token", example = "xxx.yyy.zzz")
-    @JsonProperty("refreshToken")
+    @JsonProperty("refresh-token")
     private String refreshToken;
 }
 

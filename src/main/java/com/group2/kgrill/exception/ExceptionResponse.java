@@ -1,6 +1,7 @@
 package com.group2.kgrill.exception;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,6 +18,7 @@ import java.util.Map;
 @Schema(description = "Object for exception handling")
 public class ExceptionResponse {
     @Schema(description = "Http Status Code", example = "200")
+    @JsonProperty("http-status")
     private Integer httpStatus;
     @Schema(description = "Time that the error occur", example = "05/29/2024 00:44:00")
     private String timestamp;

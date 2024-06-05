@@ -6,20 +6,21 @@ import com.group2.kgrill.dto.AuthenticationRequest;
 import com.group2.kgrill.dto.AuthenticationResponse;
 import com.group2.kgrill.dto.GoogleAuthenticationRequest;
 import com.group2.kgrill.dto.RegistrationRequest;
-import com.group2.kgrill.enums.AuthenticationProvider;
-import com.group2.kgrill.enums.EmailTemplateName;
-import com.group2.kgrill.enums.TokenType;
+
 import com.group2.kgrill.exception.ActivationTokenException;
-import com.group2.kgrill.model.EmailToken;
-import com.group2.kgrill.model.Token;
-import com.group2.kgrill.model.User;
-import com.group2.kgrill.repository.EmailTokenRepository;
-import com.group2.kgrill.repository.RoleRepository;
-import com.group2.kgrill.repository.TokenRepository;
-import com.group2.kgrill.repository.UserRepository;
+
 import com.group2.kgrill.service.AuthService;
 import com.group2.kgrill.service.EmailService;
 import com.group2.kgrill.service.JwtService;
+import com.swd392.group2.kgrill_model.enums.AuthenticationProvider;
+import com.swd392.group2.kgrill_model.enums.EmailTemplateName;
+import com.swd392.group2.kgrill_model.enums.TokenType;
+import com.swd392.group2.kgrill_model.model.EmailToken;
+import com.swd392.group2.kgrill_model.model.Token;
+import com.swd392.group2.kgrill_model.model.User;
+import com.swd392.group2.kgrill_model.repository.RoleRepository;
+import com.swd392.group2.kgrill_model.repository.TokenRepository;
+import com.swd392.group2.kgrill_model.repository.UserRepository;
 import jakarta.mail.MessagingException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -40,6 +41,8 @@ import java.io.UnsupportedEncodingException;
 import java.security.SecureRandom;
 import java.time.LocalDateTime;
 import java.util.HashMap;
+import com.swd392.group2.kgrill_model.repository.EmailTokenRepository;
+
 
 @Service
 @RequiredArgsConstructor

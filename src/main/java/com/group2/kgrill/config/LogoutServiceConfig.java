@@ -1,6 +1,7 @@
 package com.group2.kgrill.config;
 
-import com.group2.kgrill.repository.TokenRepository;
+
+import com.swd392.group2.kgrill_model.repository.TokenRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;

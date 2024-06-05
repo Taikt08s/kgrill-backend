@@ -2,12 +2,14 @@ package com.group2.kgrill.service.impl;
 
 import com.group2.kgrill.dto.UserProfileDto;
 import com.group2.kgrill.exception.CustomSuccessHandler;
-import com.group2.kgrill.model.Token;
-import com.group2.kgrill.model.User;
-import com.group2.kgrill.repository.TokenRepository;
-import com.group2.kgrill.repository.UserRepository;
+
 import com.group2.kgrill.service.JwtService;
 import com.group2.kgrill.service.UserService;
+import com.swd392.group2.kgrill_model.model.Token;
+import com.swd392.group2.kgrill_model.model.User;
+
+import com.swd392.group2.kgrill_model.repository.TokenRepository;
+import com.swd392.group2.kgrill_model.repository.UserRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;

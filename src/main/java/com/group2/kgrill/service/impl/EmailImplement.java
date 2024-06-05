@@ -1,7 +1,8 @@
 package com.group2.kgrill.service.impl;
 
-import com.group2.kgrill.enums.EmailTemplateName;
+
 import com.group2.kgrill.service.EmailService;
+import com.swd392.group2.kgrill_model.enums.EmailTemplateName;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 import lombok.RequiredArgsConstructor;

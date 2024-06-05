@@ -1,5 +1,6 @@
 package com.group2.kgrill.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
@@ -18,10 +19,12 @@ public class RegistrationRequest {
 
     @Schema(description = "User's first name", example = "Dang Dinh")
     @NotEmpty(message = "First name is mandatory")
+    @JsonProperty("first-name")
     private String firstName;
 
     @Schema(description = "User's last name", example = "Tai")
     @NotEmpty(message = "Last name is mandatory")
+    @JsonProperty("last-name")
     private String lastName;
 
     @Schema(description = "User's email address", example = "john.doe@example.com")
