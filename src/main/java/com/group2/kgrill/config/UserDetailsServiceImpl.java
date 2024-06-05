@@ -1,7 +1,6 @@
 package com.group2.kgrill.config;
 
 
-
 import com.swd392.group2.kgrill_model.repository.UserRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
