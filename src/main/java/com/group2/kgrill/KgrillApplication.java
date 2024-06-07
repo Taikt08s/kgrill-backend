@@ -7,7 +7,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 
 @SpringBootApplication
 @EnableAsync
-@ComponentScan(basePackages = {"com.group2.kgrill", "com.swd392.group2.kgrill_model", "com.swd392.group2.kgrill_dto", "com.swd392.group2.kgrill_service"})
+@ComponentScan(basePackages = {"com.group2.kgrill", "com.swd392.group2.kgrill_service"})
 public class KgrillApplication {
 
     public static void main(String[] args) {

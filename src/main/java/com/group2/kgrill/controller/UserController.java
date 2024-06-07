@@ -1,9 +1,9 @@
 package com.group2.kgrill.controller;
 
-
-import com.swd392.group2.kgrill_dto.dto.UserProfileDto;
+import com.group2.kgrill.dto.UserProfileDto;
 import com.swd392.group2.kgrill_service.service.CloudinaryUploadService;
 import com.swd392.group2.kgrill_service.service.UserService;
+
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.ExampleObject;

@@ -18,16 +18,16 @@
 	</properties>
 	<distributionManagement>
 		<repository>
-			<id>github</id>
+			<id>github-kgrill-backend</id>
 			<name>GitHub Packages</name>
 			<url>https://maven.pkg.github.com/Taikt08s/kgrill_backend</url>
 		</repository>
 	</distributionManagement>
 	<repositories>
 		<repository>
-			<id>github</id>
+			<id>github-kgrill-service</id>
 			<name>GitHub Packages</name>
-			<url>https://maven.pkg.github.com/Taikt08s/kgrill_backend</url>
+			<url>https://maven.pkg.github.com/Taikt08s/kgrill-service</url>
 		</repository>
 	</repositories>
 	<dependencies>
@@ -84,11 +84,6 @@
 		</dependency>
 		<dependency>
 			<groupId>com.swd392.group2</groupId>
-			<artifactId>kgrill-dto</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>com.swd392.group2</groupId>
 			<artifactId>kgrill-service</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
@@ -112,6 +107,14 @@
 						</configuration>
 					</execution>
 				</executions>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
