@@ -6,7 +6,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.scheduling.annotation.EnableAsync;
 
 @SpringBootApplication
-@EnableAsync
 @ComponentScan(basePackages = {"com.group2.kgrill", "com.swd392.group2.kgrill_service"})
 public class KgrillApplication {
 
