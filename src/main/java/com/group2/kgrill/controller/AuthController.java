@@ -1,12 +1,13 @@
 package com.group2.kgrill.controller;
 
 import com.group2.kgrill.config.LogoutServiceConfig;
-import com.group2.kgrill.dto.AuthenticationRequest;
-import com.group2.kgrill.dto.GoogleAuthenticationRequest;
-import com.group2.kgrill.dto.RegistrationRequest;
+
 import com.group2.kgrill.exception.CustomSuccessHandler;
 import com.group2.kgrill.exception.ExceptionResponse;
 import com.group2.kgrill.service.AuthService;
+import com.swd392.group2.kgrill_dto.dto.AuthenticationRequest;
+import com.swd392.group2.kgrill_dto.dto.GoogleAuthenticationRequest;
+import com.swd392.group2.kgrill_dto.dto.RegistrationRequest;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.ExampleObject;

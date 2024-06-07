@@ -1,6 +1,7 @@
 package com.group2.kgrill.service;
 
-import com.group2.kgrill.dto.UserProfileDto;
+
+import com.swd392.group2.kgrill_dto.dto.UserProfileDto;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.ResponseEntity;
 

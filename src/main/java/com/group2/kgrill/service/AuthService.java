@@ -1,9 +1,10 @@
 package com.group2.kgrill.service;
 
-import com.group2.kgrill.dto.AuthenticationRequest;
-import com.group2.kgrill.dto.AuthenticationResponse;
-import com.group2.kgrill.dto.GoogleAuthenticationRequest;
-import com.group2.kgrill.dto.RegistrationRequest;
+
+import com.swd392.group2.kgrill_dto.dto.AuthenticationRequest;
+import com.swd392.group2.kgrill_dto.dto.AuthenticationResponse;
+import com.swd392.group2.kgrill_dto.dto.GoogleAuthenticationRequest;
+import com.swd392.group2.kgrill_dto.dto.RegistrationRequest;
 import jakarta.mail.MessagingException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

@@ -1,8 +1,8 @@
 package com.group2.kgrill.controller;
 
-import com.group2.kgrill.dto.UserProfileDto;
 import com.group2.kgrill.service.CloudinaryUploadService;
 import com.group2.kgrill.service.UserService;
+import com.swd392.group2.kgrill_dto.dto.UserProfileDto;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.ExampleObject;
@@ -59,7 +59,7 @@ public class UserController {
                                     """))),
             @ApiResponse(responseCode = "401", description = "No JWT token found in the request header"),
     })
-    @GetMapping("/account")
+    @GetMapping("/profile")
     public ResponseEntity<Object> getCurrentLoginUser(HttpServletRequest request) {
         return userService.getUserInformation(request);
     }
@@ -72,7 +72,7 @@ public class UserController {
             @ApiResponse(responseCode = "200", description = "Account information update successfully"),
             @ApiResponse(responseCode = "500", description = "No JWT token found in the request header"),
     })
-    @PutMapping(value = "/account/update_profile")
+    @PutMapping(value = "/profile-management")
     public ResponseEntity<Object> updateLoggedInUser(@NotNull UUID id,
                                                      @RequestBody @Valid UserProfileDto userProfileDto) {
 
@@ -92,7 +92,7 @@ public class UserController {
             @ApiResponse(responseCode = "200", description = "User profile picture updated successfully"),
             @ApiResponse(responseCode = "500", description = "Failed to update user profile picture"),
     })
-    @PostMapping(value = "/account/image_upload", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
+    @PostMapping(value = "/image", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     public ResponseEntity<Object> updateUserProfilePicture(@NotNull UUID id,
                                                            @RequestParam(value = "profilePicture", required = false) MultipartFile profilePicture) throws IOException {
 

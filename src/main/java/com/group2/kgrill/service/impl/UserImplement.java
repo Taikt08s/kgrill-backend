@@ -1,9 +1,10 @@
 package com.group2.kgrill.service.impl;
 
-import com.group2.kgrill.dto.UserProfileDto;
+
 import com.group2.kgrill.exception.CustomSuccessHandler;
 import com.group2.kgrill.service.JwtService;
 import com.group2.kgrill.service.UserService;
+import com.swd392.group2.kgrill_dto.dto.UserProfileDto;
 import com.swd392.group2.kgrill_model.model.Token;
 import com.swd392.group2.kgrill_model.model.User;
 
