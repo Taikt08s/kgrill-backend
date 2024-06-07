@@ -35,8 +35,6 @@ RUN mkdir -p /root/.m2 && echo '<settings xmlns="http://maven.apache.org/SETTING
   </servers> \
   </settings>' > /root/.m2/settings.xml
 
-# Install unzip package
-RUN apt-get update && apt-get install -y unzip
 
 COPY . .
 RUN mvn clean package -DskipTests
