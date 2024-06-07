@@ -104,7 +104,12 @@
 						<id>repackage</id>
 						<configuration>
 							<classifier>exec</classifier>
+							<mainClass>com.group2.kgrill.KgrillApplication</mainClass>
+							<layout>JAR</layout>
 						</configuration>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
 					</execution>
 				</executions>
 				<configuration>
