@@ -35,8 +35,6 @@ RUN mkdir -p /root/.m2 && echo '<settings xmlns="http://maven.apache.org/SETTING
   </servers> \
   </settings>' > /root/.m2/settings.xml
 
-# Install unzip package
-RUN apt-get update && apt-get install -y unzip
 
 COPY . .
 RUN mvn clean package -DskipTests
@@ -45,5 +43,3 @@ FROM openjdk:17.0.1-jdk-slim
 COPY --from=build target/kgrill-0.0.1-SNAPSHOT.jar demo1.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","demo1.jar"]
-
-RUN unzip -p target/kgrill-0.0.1-SNAPSHOT.jar META-INF/MANIFEST.MF
