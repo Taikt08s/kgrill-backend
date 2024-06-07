@@ -27,12 +27,7 @@
 		<repository>
 			<id>github</id>
 			<name>GitHub Packages</name>
-			<url>https://maven.pkg.github.com/Taikt08s/kgrill-dto</url>
-		</repository>
-		<repository>
-			<id>github</id>
-			<name>GitHub Packages</name>
-			<url>https://maven.pkg.github.com/Taikt08s/kgrill-service</url>
+			<url>https://maven.pkg.github.com/Taikt08s/kgrill_backend</url>
 		</repository>
 	</repositories>
 	<dependencies>
