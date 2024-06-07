@@ -1,6 +1,6 @@
 package com.group2.kgrill.config;
 
-import com.group2.kgrill.service.JwtService;
+import com.swd392.group2.kgrill_service.service.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

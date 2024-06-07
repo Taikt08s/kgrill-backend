@@ -4,10 +4,10 @@ import com.group2.kgrill.config.LogoutServiceConfig;
 
 import com.group2.kgrill.exception.CustomSuccessHandler;
 import com.group2.kgrill.exception.ExceptionResponse;
-import com.group2.kgrill.service.AuthService;
 import com.swd392.group2.kgrill_dto.dto.AuthenticationRequest;
 import com.swd392.group2.kgrill_dto.dto.GoogleAuthenticationRequest;
 import com.swd392.group2.kgrill_dto.dto.RegistrationRequest;
+import com.swd392.group2.kgrill_service.service.AuthService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.ExampleObject;
@@ -36,7 +36,6 @@ public class AuthController {
     private final AuthService authService;
 
     private final LogoutServiceConfig logoutServiceConfig;
-
 
     @Operation(
             summary = "Register a new account",
@@ -211,7 +210,6 @@ public class AuthController {
                                     """))),
     })
     @PostMapping("/google-signin")
-    @CrossOrigin(origins = "*")
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<?> googleSignIn(@RequestBody GoogleAuthenticationRequest request) {
         return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Successfully SignIn with Google", authService.findOrCreateUser(request));

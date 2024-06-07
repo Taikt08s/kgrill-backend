@@ -11,11 +11,11 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @EnableAsync
 @EnableJpaRepositories(basePackages = "com.swd392.group2.kgrill_model.repository")
 @EntityScan(basePackages = "com.swd392.group2.kgrill_model.model")
-@ComponentScan(basePackages = {"com.group2.kgrill", "com.swd392.group2.kgrill_model","com.swd392.group2.kgrill_dto"})
+@ComponentScan(basePackages = {"com.group2.kgrill", "com.swd392.group2.kgrill_model", "com.swd392.group2.kgrill_dto", "com.swd392.group2.kgrill_service"})
 public class KgrillApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(KgrillApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(KgrillApplication.class, args);
+    }
 
 }
