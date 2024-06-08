@@ -53,7 +53,7 @@ public class AuthController {
                                     }
                                     """))),
             @ApiResponse(responseCode = "400", description = "Validation error",
-                    content = @Content(mediaType = "application/json",
+                    content = @Content(
                             schema = @Schema(implementation = ExceptionResponse.class),
                             examples = @ExampleObject(value = """
                                     }
@@ -175,7 +175,7 @@ public class AuthController {
     }
 
     @Operation(
-            summary = "Social Login in to the system using Google",
+            summary = "Social Login in to the system using Google (Mobile)",
             description = "Login into the system using Google. The response will include an access token and a refresh token")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successfully SignIn with Google",
