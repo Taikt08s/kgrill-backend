@@ -25,11 +25,15 @@ jobs:
       run: |
         CURRENT_VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
         echo "Current version: $CURRENT_VERSION"
-        LATEST_TAG=$(git describe --tags $(git rev-list --tags --max-count=1))
-        echo "Latest tag: $LATEST_TAG"
-        if [ "v$CURRENT_VERSION" == "$LATEST_TAG" ]; then
-          echo "Error: Version not bumped. Please update the version in pom.xml."
-          exit 1
+        if git describe --tags $(git rev-list --tags --max-count=1) >/dev/null 2>&1; then
+          LATEST_TAG=$(git describe --tags $(git rev-list --tags --max-count=1))
+          echo "Latest tag: $LATEST_TAG"
+          if [ "v$CURRENT_VERSION" == "$LATEST_TAG" ]; then
+            echo "Error: Version not bumped. Please update the version in pom.xml."
+            exit 1
+          fi
+        else
+          echo "No tags found. Skipping version check."
         fi
         echo "::set-output name=current_version::$CURRENT_VERSION"
 
