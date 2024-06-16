@@ -17,6 +17,11 @@ jobs:
           mkdir -p ~/.m2
           echo "<settings>
                   <servers>
+                  <server>
+                      <id>github-kgrill-service</id>
+                      <username>taikt08s</username>
+                      <password>${{ secrets.JAVA_TOKEN_SERVICE }}</password>
+                    </server>
                     <server>
                       <id>github-kgrill-backend</id>
                       <username>taikt08s</username>
