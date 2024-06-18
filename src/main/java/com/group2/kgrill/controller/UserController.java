@@ -1,7 +1,6 @@
 package com.group2.kgrill.controller;
 
-import com.group2.kgrill.dto.DeliveryLocationDTO;
-import com.group2.kgrill.dto.UserProfileDto;
+import com.swd392.group2.kgrill_service.dto.UserProfileDto;
 import com.swd392.group2.kgrill_service.service.CloudinaryUploadService;
 import com.swd392.group2.kgrill_service.service.UserService;
 
