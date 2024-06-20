@@ -41,20 +41,20 @@ public class UserController {
                     content = @Content(
                             examples = @ExampleObject(value = """
                                         {
-                                           "httpStatus": 200,
-                                           "timestamp": "06/02/2024 17:25:41",
+                                           "http_status": 200,
+                                           "time_stamp": "06/02/2024 17:25:41",
                                            "message": "Successfully retrieved user information",
                                            "data": {
                                              "userId": "a9126139-3c11-47ba-8493-cf7e480c3645",
-                                             "firstName": "James",
-                                             "lastName": "Bond",
+                                             "first_name": "James",
+                                             "last_name": "Bond",
                                              "email": "Sniper6969@gmail.com",
                                              "address": "123 Main St, Springfield",
                                              "gender": null,
                                              "phone": "0877643231",
-                                             "profilePic": null,
-                                             "authProvider": null,
-                                             "roleName": "USER"
+                                             "profile_pic": null,
+                                             "auth_provider": null,
+                                             "role_name": "USER"
                                            }
                                          }
                                     """))),
@@ -95,7 +95,7 @@ public class UserController {
     })
     @PostMapping(value = "/image", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     public ResponseEntity<Object> updateUserProfilePicture(@NotNull UUID id,
-                                                           @RequestParam(value = "profilePicture", required = false) MultipartFile profilePicture) throws IOException {
+                                                           @RequestParam(value = "profile_pic", required = false) MultipartFile profilePicture) throws IOException {
 
         if (profilePicture != null && !profilePicture.isEmpty()) {
             String imageURLMain = cloudinaryUploadConfig.uploadFile(profilePicture);

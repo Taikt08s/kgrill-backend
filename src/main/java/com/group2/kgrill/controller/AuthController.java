@@ -41,14 +41,14 @@ public class AuthController {
     @ApiResponses(value = {@ApiResponse(responseCode = "202", description = "Successfully Registered", content = @Content(examples = @ExampleObject(value = """
             {
               "message": "Successfully Register",
-              "httpStatus": 202,
+              "http_status": 202,
               "timestamp": "05/29/2024 21:20:36",
               "data": "Please check your email for account verification."
             }
             """))), @ApiResponse(responseCode = "400", description = "Validation error", content = @Content(schema = @Schema(implementation = ExceptionResponse.class), examples = @ExampleObject(value = """
             }
-            "httpStatus": 400,
-            "timestamp": "05/29/2024 00:44:00",
+            "http_status": 400,
+            "time_stamp": "05/29/2024 00:44:00",
             "error": "Field 'email' is invalid",
             "data": {
                 "email": "must be a well-formed email address",
@@ -64,29 +64,29 @@ public class AuthController {
     @Operation(summary = "Login in to the system", description = "Login into the system requires all information to be provided, " + "and validations will be performed. The response will include an access token and a refresh token")
     @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "Successfully SignIn", content = @Content(examples = @ExampleObject(value = """
                 {
-                   "httpStatus": 200,
-                   "timestamp": "10/29/2024 11:20:03",
+                   "http_status": 200,
+                   "time_stamp": "10/29/2024 11:20:03",
                    "message": "Successfully SignIn",
                    "data": {
-                     "accessToken": "xxxx.yyyy.zzzz",
-                     "refreshToken": "xxxx.yyyy.zzzz"
+                     "access_token": "xxxx.yyyy.zzzz",
+                     "refresh_token": "xxxx.yyyy.zzzz"
                 }
             """))), @ApiResponse(responseCode = "401", description = "Unauthorized", content = @Content(examples = @ExampleObject(value = """
                 {
-                 "httpStatus": 401,
-                 "timestamp": "05/29/2024 21:24:57",
+                 "http_status": 401,
+                 "time_stamp": "05/29/2024 21:24:57",
                  "message": "Email or Password is incorrect"
                }
             """))), @ApiResponse(responseCode = "401", description = "Account Locked", content = @Content(examples = @ExampleObject(value = """
                 {
-                 "httpStatus": 401,
-                 "timestamp": "05/29/2024 21:24:57",
+                 "http_status": 401,
+                 "time_stamp": "05/29/2024 21:24:57",
                  "message": "Account is locked please contact administrator for more information"
                }
             """))), @ApiResponse(responseCode = "401", description = "Account Disabled", content = @Content(examples = @ExampleObject(value = """
                 {
-                 "httpStatus": 401,
-                 "timestamp": "05/26/2024 21:24:57",
+                 "http_status": 401,
+                 "time_stamp": "05/26/2024 21:24:57",
                  "message": "Account is disabled please contact administrator for more information"
                }
             """))),})
@@ -115,8 +115,8 @@ public class AuthController {
     @Operation(summary = "Refresh token if expired", description = "If the current JWT Refresh Token has expired or been revoked, you can refresh it using this method")
     @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "Generate new Refresh Token and Access Token successfully", content = @Content(examples = @ExampleObject(value = """
                 {
-                 "accessToken": "xxxx.yyyy.zzzz",
-                 "refreshToken": "xxxx.yyyy.zzzz"
+                 "access_token": "xxxx.yyyy.zzzz",
+                 "refresh_token": "xxxx.yyyy.zzzz"
                }
             """))), @ApiResponse(responseCode = "401", description = "No JWT token found in the request header"), @ApiResponse(responseCode = "401", description = "JWT token has expired and revoked")})
     @PostMapping("/refresh-token")
@@ -128,23 +128,23 @@ public class AuthController {
     @Operation(summary = "Social Login in to the system using Google (Mobile)", description = "Login into the system using Google. The response will include an access token and a refresh token")
     @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "Successfully SignIn with Google", content = @Content(examples = @ExampleObject(value = """
                 {
-                   "httpStatus": 200,
-                   "timestamp": "10/29/2024 11:20:03",
+                   "http_status": 200,
+                   "time_stamp": "10/29/2024 11:20:03",
                    "message": "Successfully SignIn with Google",
                    "data": {
-                     "accessToken": "xxxx.yyyy.zzzz",
-                     "refreshToken": "xxxx.yyyy.zzzz"
+                     "access_token": "xxxx.yyyy.zzzz",
+                     "refresh_token": "xxxx.yyyy.zzzz"
                 }
             """))), @ApiResponse(responseCode = "401", description = "Account Locked", content = @Content(examples = @ExampleObject(value = """
                 {
-                 "httpStatus": 401,
-                 "timestamp": "05/29/2024 21:24:57",
+                 "http_status": 401,
+                 "time_stamp": "05/29/2024 21:24:57",
                  "message": "Account is locked please contact administrator for more information"
                }
             """))), @ApiResponse(responseCode = "401", description = "Account Disabled", content = @Content(examples = @ExampleObject(value = """
                 {
-                 "httpStatus": 401,
-                 "timestamp": "05/26/2024 21:24:57",
+                 "http_status": 401,
+                 "time_stamp": "05/26/2024 21:24:57",
                  "message": "Account is disabled please contact administrator for more information"
                }
             """))),})
