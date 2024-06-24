@@ -73,7 +73,7 @@ public class UserController {
             @ApiResponse(responseCode = "200", description = "Account information update successfully"),
             @ApiResponse(responseCode = "500", description = "No JWT token found in the request header"),
     })
-    @PutMapping(value = "/profile-management")
+    @PutMapping(value = "/profile")
     public ResponseEntity<Object> updateLoggedInUser(@NotNull UUID id,
                                                      @RequestBody @Valid UserProfileDto userProfileDto) {
 
