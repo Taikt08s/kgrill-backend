@@ -71,11 +71,6 @@
             <version>3.1.2.RELEASE</version>
         </dependency>
         <dependency>
-            <groupId>com.cloudinary</groupId>
-            <artifactId>cloudinary-http44</artifactId>
-            <version>1.38.0</version>
-        </dependency>
-        <dependency>
             <groupId>com.swd392.group2</groupId>
             <artifactId>kgrill-service</artifactId>
             <version>0.0.1-SNAPSHOT</version>
