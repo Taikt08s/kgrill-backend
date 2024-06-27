@@ -122,7 +122,7 @@ public class AuthController {
             """))), @ApiResponse(responseCode = "401", description = "No JWT token found in the request header"), @ApiResponse(responseCode = "401", description = "JWT token has expired and revoked")})
     @PostMapping("/refresh-token")
     @ResponseStatus(HttpStatus.OK)
-    public void refreshToken(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public void refreshToken(HttpServletRequest request, HttpServletResponse response) throws IOException, JOSEException {
         authService.refreshToken(request, response);
     }
 
