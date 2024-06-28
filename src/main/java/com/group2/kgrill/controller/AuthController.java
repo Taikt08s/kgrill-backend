@@ -1,5 +1,6 @@
 package com.group2.kgrill.controller;
 
+import com.nimbusds.jose.JOSEException;
 import com.swd392.group2.kgrill_service.config.LogoutServiceConfig;
 import com.swd392.group2.kgrill_service.dto.AuthenticationRequest;
 import com.swd392.group2.kgrill_service.dto.GoogleAuthenticationRequest;
@@ -92,7 +93,7 @@ public class AuthController {
             """))),})
     @PostMapping("/signin")
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<?> signIn(@RequestBody @Valid AuthenticationRequest request) {
+    public ResponseEntity<?> signIn(@RequestBody @Valid AuthenticationRequest request) throws JOSEException {
         return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Successfully SignIn", authService.authenticate(request));
     }
 
@@ -121,7 +122,7 @@ public class AuthController {
             """))), @ApiResponse(responseCode = "401", description = "No JWT token found in the request header"), @ApiResponse(responseCode = "401", description = "JWT token has expired and revoked")})
     @PostMapping("/refresh-token")
     @ResponseStatus(HttpStatus.OK)
-    public void refreshToken(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public void refreshToken(HttpServletRequest request, HttpServletResponse response) throws IOException, JOSEException {
         authService.refreshToken(request, response);
     }
 
