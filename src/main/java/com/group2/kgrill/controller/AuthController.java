@@ -152,7 +152,7 @@ public class AuthController {
     @PostMapping("/google-signin")
     @CrossOrigin(origins = "*")
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<?> googleSignIn(@RequestBody GoogleAuthenticationRequest request) {
+    public ResponseEntity<?> googleSignIn(@RequestBody GoogleAuthenticationRequest request) throws JOSEException {
         return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Successfully SignIn with Google", authService.findOrCreateUser(request));
     }
 }

@@ -29,7 +29,7 @@ public class AdminController {
     private final UserService userService;
 
     @Operation(
-            summary = "View user profile",
+            summary = "View user profile by admin",
             description = "View all user information in admin panel. Passwords, tokens, etc., " +
                     "will not be displayed",
             tags = {"Admin"})
@@ -70,41 +70,11 @@ public class AdminController {
             @RequestParam(name = "sortDir", defaultValue = AppConstants.DEFAULT_SORT_DIRECTION, required = false) String sortDir,
             @RequestParam(name = "email", defaultValue = "", required = false) String email
     ) {
-        return ResponseEntity.ok(userService.getAllUsers(pageNo, pageSize, sortBy, sortDir, email));
+        return userService.getAllUsersByAdmin(pageNo, pageSize, sortBy, sortDir, email);
     }
 
     @Operation(
-            summary = "View user profile",
-            description = "View current user information after logging into the system. Passwords, tokens, etc., " +
-                    "will not be displayed",
-            tags = {"Account"})
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Account information retrieve successfully",
-                    content = @Content(
-                            examples = @ExampleObject(value = """
-                                        {
-                                           "http_status": 200,
-                                           "time_stamp": "06/02/2024 17:25:41",
-                                           "message": "Successfully retrieved user information",
-                                           "data": {
-                                             "userId": "a9126139-3c11-47ba-8493-cf7e480c3645",
-                                             "first_name": "James",
-                                             "last_name": "Bond",
-                                             "email": "Sniper6969@gmail.com",
-                                             "address": "123 Main St, Springfield",
-                                             "account_not_locked": "true"
-                                           }
-                                         }
-                                    """))),
-            @ApiResponse(responseCode = "401", description = "No JWT token found in the request header"),
-    })
-    @GetMapping("/profile")
-    public ResponseEntity<Object> getCurrentLoginUser(HttpServletRequest request) {
-        return userService.getUserInformation(request);
-    }
-
-    @Operation(
-            summary = "Update user profile information",
+            summary = "Update user profile information by admin",
             description = "Update user information in admin panel.",
             tags = {"Admin"})
     @ApiResponses(value = {
