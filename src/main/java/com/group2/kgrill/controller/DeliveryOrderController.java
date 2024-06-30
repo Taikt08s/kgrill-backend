@@ -6,10 +6,13 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.constraints.NotNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.UUID;
 
 @RestController
 @RequestMapping("delivery-order")
@@ -28,7 +31,7 @@ public class DeliveryOrderController {
             @ApiResponse(responseCode = "400", description = "Failed to update delivery order location"),
     })
     @PostMapping(value = "/location")
-    public ResponseEntity<Object> updateDeliveryOrderLocation(@PathVariable Long id,
+    public ResponseEntity<Object> updateDeliveryOrderLocation(@NotNull Long id,
                                                               @RequestBody DeliveryLocationDTO deliveryLocationRequest) {
         if (deliveryLocationRequest != null && id != null) {
             deliveryOrderService.updateDeliveryOrderLocation(id, deliveryLocationRequest);
