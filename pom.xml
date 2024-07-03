@@ -119,6 +119,14 @@
                                 </configuration>
                             </execution>
                         </executions>
+                        <configuration>
+                            <excludes>
+                                <exclude>
+                                    <groupId>com.group2</groupId>
+                                    <artifactId>kgrill-service</artifactId>
+                                </exclude>
+                            </excludes>
+                        </configuration>
                     </plugin>
                 </plugins>
             </build>
