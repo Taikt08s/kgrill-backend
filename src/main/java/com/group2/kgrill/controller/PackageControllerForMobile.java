@@ -10,10 +10,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("mobile/food-package")
@@ -47,11 +44,8 @@ public class PackageControllerForMobile {
             @ApiResponse(responseCode = "200", description = "Get food package detail successfully"),
             @ApiResponse(responseCode = "400", description = "Failed to get food package detail"),
     })
-    @PostMapping(value = "/search")
-    public ResponseEntity<Object> getFoodPackageDetailOnMobile(
-//                                                              @Parameter(description = "Filter by name/size/") @RequestParam(name = "filter", required = false) String filter,
-                                                    @Parameter(description = "Search keyword") @RequestParam(value = "value", required = false) String value) {
-
-        return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Successfully get package list", packageService.getAllPackageOnMobile());
+    @PostMapping(value = "/{id}")
+    public ResponseEntity<Object> getFoodPackageDetailOnMobile(@PathVariable("id") int pkgId) {
+        return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Successfully get package detail", packageService.getPackageDetailOnMobile(pkgId));
     }
 }
