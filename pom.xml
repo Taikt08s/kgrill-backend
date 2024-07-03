@@ -122,7 +122,7 @@
                         <configuration>
                             <excludes>
                                 <exclude>
-                                    <groupId>com.group2</groupId>
+                                    <groupId>com.swd392.group2</groupId>
                                     <artifactId>kgrill-service</artifactId>
                                 </exclude>
                             </excludes>
