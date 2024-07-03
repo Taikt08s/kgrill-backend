@@ -56,7 +56,8 @@ public class AdminController {
                                                  "gender":"null",
                                                  "phone": "0909123456",
                                                  "role": "USER",
-                                                 "account_not_locked": true
+                                                 "account_not_locked": true,
+                                                 "dob": ""
                                                  }
                                                   ],
                                              "page_no": "0",
@@ -191,14 +192,15 @@ public class AdminController {
                     @ApiResponse(responseCode = "400", description = "Fail to retrieve revenue by period")
             }
     )
-    @GetMapping(value = "/revenue/daily")
-    public ResponseEntity<Object> getRevenueByDaily(
+    @GetMapping(value = "/revenue")
+    public ResponseEntity<Object> getRevenueByPeriod(
             @RequestParam(name = "pageNo", defaultValue = AppConstants.DEFAULT_PAGE_NUMBER, required = false) int pageNo,
             @RequestParam(name = "pageSize", defaultValue = AppConstants.DEFAULT_PAGE_SIZE, required = false) int pageSize,
             @RequestParam(name = "sortBy", defaultValue = AppConstants.DEFAULT_SORT_BY, required = false) String sortBy,
-            @RequestParam(name = "sortDir", defaultValue = AppConstants.DEFAULT_SORT_DIRECTION, required = false) String sortDir
+            @RequestParam(name = "sortDir", defaultValue = AppConstants.DEFAULT_SORT_DIRECTION, required = false) String sortDir,
+            @RequestParam(name = "period", defaultValue = "monthly", required = false) String period
             ){
-        return deliveryOrderService.getRevenueByDaily(pageNo, pageSize, sortBy, sortDir);
+        return deliveryOrderService.getRevenueByPeriod(pageNo, pageSize, sortBy, sortDir, period);
     }
 
 }
