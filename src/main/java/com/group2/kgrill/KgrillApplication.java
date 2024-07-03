@@ -8,7 +8,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableScheduling
-@ComponentScan(basePackages = {"com.group2.kgrill", "com.swd392.group2.kgrill_service"})
+@ComponentScan(basePackages = {"com.swd392.group2.kgrill_service"})
 public class KgrillApplication {
 
     public static void main(String[] args) {
