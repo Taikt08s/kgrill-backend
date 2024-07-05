@@ -15,10 +15,13 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import lombok.RequiredArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.UUID;
 
 @RestController
@@ -96,30 +99,6 @@ public class AdminController {
     }
 
     @Operation(
-            summary = "Get number of users by admin",
-            description = "Get number of users by admin in order to show in admin panel. Enter role name to get number of users",
-            tags = {"Admin"})
-    @ApiResponses(
-            value = {
-                    @ApiResponse(responseCode = "200", description = "Number of users retrieve successfully",
-                            content = @Content(
-                                    examples = @ExampleObject(value = """
-                                        {
-                                           "http_status": 200,
-                                           "time_stamp": "06/02/2024 17:25:41",
-                                           "message": "Number of users retrieve successfully",
-                                           "data": 9
-                                         }
-                                    """))),
-                    @ApiResponse(responseCode = "400", description = "Fail to retrieve number of users")
-            }
-    )
-    @GetMapping(value = "/management/number-of-users")
-    public ResponseEntity<Object> getNumberOfUsers(@NotNull String roleName) {
-        return userService.getNumberOfUsersByRoleId(roleName);
-    }
-
-    @Operation(
             summary = "Get number of orders by admin",
             description = "Get number of orders by admin by daily, weekly,monthly and yearly in order to show in admin panel.",
             tags = {"Admin"})
@@ -131,7 +110,7 @@ public class AdminController {
                                         {
                                            "http_status": 200,
                                            "time_stamp": "06/02/2024 17:25:41",
-                                           "message": "Number of users retrieve successfully",
+                                           "message": "Number of orders retrieve successfully",
                                            "data": {
                                                   "daily_order": 2,
                                                   "weekly_order": 2,
@@ -161,7 +140,7 @@ public class AdminController {
                                         {
                                                     "http_status": 200,
                                                     "time_stamp": "07/02/2024 13:36:52",
-                                                    "message": "Successfully retrieved revenue by daily",
+                                                    "message": "Successfully retrieved revenue",
                                                     "data": {
                                                       "content": [
                                                         {
@@ -198,9 +177,15 @@ public class AdminController {
             @RequestParam(name = "pageSize", defaultValue = AppConstants.DEFAULT_PAGE_SIZE, required = false) int pageSize,
             @RequestParam(name = "sortBy", defaultValue = AppConstants.DEFAULT_SORT_BY, required = false) String sortBy,
             @RequestParam(name = "sortDir", defaultValue = AppConstants.DEFAULT_SORT_DIRECTION, required = false) String sortDir,
-            @RequestParam(name = "period", defaultValue = "monthly", required = false) String period
+            @RequestParam(name = "period", defaultValue = "monthly", required = false) String period,
+            @RequestParam(name = "date",defaultValue = "", required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date
             ){
-        return deliveryOrderService.getRevenueByPeriod(pageNo, pageSize, sortBy, sortDir, period);
+        if (date == null) {
+            date = LocalDate.now(); // Sử dụng ngày hiện tại nếu không có giá trị truyền vào
+        }
+        return deliveryOrderService.getRevenueByPeriod(pageNo, pageSize, sortBy, sortDir, period, date.plusDays(1));
     }
+
+
 
 }
