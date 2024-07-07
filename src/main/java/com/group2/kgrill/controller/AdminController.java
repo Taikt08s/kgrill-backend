@@ -94,7 +94,7 @@ public class AdminController {
     })
     @PutMapping(value = "/management/account")
     public ResponseEntity<Object> updateUserProfile(@NotNull UUID id,
-                                                     @RequestBody @Valid CustomUserProfile customUserProfile) {
+                                                    @RequestBody @Valid CustomUserProfile customUserProfile) {
         return userService.updateUserProfileByAdmin(id, customUserProfile);
     }
 
@@ -107,67 +107,61 @@ public class AdminController {
                     @ApiResponse(responseCode = "200", description = "Number of orders retrieve successfully",
                             content = @Content(
                                     examples = @ExampleObject(value = """
-                                        {
-                                           "http_status": 200,
-                                           "time_stamp": "06/02/2024 17:25:41",
-                                           "message": "Number of orders retrieve successfully",
-                                           "data": {
-                                                  "daily_order": 2,
-                                                  "weekly_order": 2,
-                                                  "monthly_order": 2,
-                                                  "yearly_order": 3
-                                           }
-                                         }
-                                    """))),
+                                                {
+                                                   "http_status": 200,
+                                                   "time_stamp": "06/02/2024 17:25:41",
+                                                   "message": "Number of orders retrieve successfully",
+                                                   "data": {
+                                                          "daily_order": 2,
+                                                          "weekly_order": 2,
+                                                          "monthly_order": 2,
+                                                          "yearly_order": 3
+                                                   }
+                                                 }
+                                            """))),
                     @ApiResponse(responseCode = "400", description = "Fail to retrieve number of orders")
             }
     )
     @GetMapping(value = "/number-of-orders")
-    public ResponseEntity<Object> getNumberOfOrders(){
+    public ResponseEntity<Object> getNumberOfOrders() {
         return deliveryOrderService.getNumberOfOrders();
     }
 
 
     @Operation(
             summary = "Get revenue by daily, monthly or yearly",
-            description = "Get revenue by period in order to show in admin panel.",
+            description = "Get revenue by period and LocalDate in order to show in admin panel.\n" +
+                    "Default sorted by orderDate. SortBy value= totalRevenue, completedOrder or cancelledOrder",
             tags = {"Admin"})
     @ApiResponses(
             value = {
                     @ApiResponse(responseCode = "200", description = "Revenue by period retrieve successfully",
                             content = @Content(
                                     examples = @ExampleObject(value = """
-                                        {
-                                                    "http_status": 200,
-                                                    "time_stamp": "07/02/2024 13:36:52",
-                                                    "message": "Successfully retrieved revenue",
-                                                    "data": {
-                                                      "content": [
-                                                        {
-                                                          "Delivery_order_id": 1,
-                                                          "User_name": "VV T",
-                                                          "Package_name": [
-                                                            "Combo Bò nướng mĩ vị Tailor",
-                                                            "Lẩu Tứ Xuyên"
-                                                          ],
-                                                          "Delivery_order_status": "Delivered ",
-                                                          "Delivery_order_date": "2024-07-01T05:49:21.000+00:00",
-                                                          "Delivery_shipped_date": "2024-07-01T06:50:39.000+00:00",
-                                                          "Shipper_name": "Shipper T",
-                                                          "Delivery_order_value": 1400000
-                                                        },
-                                                      ],
-                                                      "page_no": 0,
-                                                      "page_size": 10,
-                                                      "total_elements": 3,
-                                                      "total_pages": 1,
-                                                      "last": true,
-                                                      "total_revenue": 3300000,
-                                                      "completed_order": 2300000,
-                                                      "cancelled_order": 1000000
-                                                    }
-                                                  }
-                                    """))),
+                                             {
+                                                       "http_status": 200,
+                                                       "time_stamp": "07/06/2024 16:16:00",
+                                                       "message": "Successfully retrieved revenue",
+                                                       "data": {
+                                                         "content": [
+                                                           {
+                                                             "order_date": "2024-06",
+                                                             "total_order_number": 1,
+                                                             "completed_number": 1,
+                                                             "cancelled_number": 0,
+                                                             "total_revenue": 300000,
+                                                             "completed_order": 300000,
+                                                             "cancelled_order": 0
+                                                           }
+                                                         ],
+                                                         "page_no": 1,
+                                                         "page_size": 1,
+                                                         "total_elements": 4,
+                                                         "total_pages": 4,
+                                                         "last": false
+                                                       }
+                                                     }
+                                            """))),
                     @ApiResponse(responseCode = "400", description = "Fail to retrieve revenue by period")
             }
     )
@@ -175,17 +169,84 @@ public class AdminController {
     public ResponseEntity<Object> getRevenueByPeriod(
             @RequestParam(name = "pageNo", defaultValue = AppConstants.DEFAULT_PAGE_NUMBER, required = false) int pageNo,
             @RequestParam(name = "pageSize", defaultValue = AppConstants.DEFAULT_PAGE_SIZE, required = false) int pageSize,
-            @RequestParam(name = "sortBy", defaultValue = AppConstants.DEFAULT_SORT_BY, required = false) String sortBy,
+            @RequestParam(name = "sortBy", defaultValue = "orderDate", required = false) String sortBy,
             @RequestParam(name = "sortDir", defaultValue = AppConstants.DEFAULT_SORT_DIRECTION, required = false) String sortDir,
-            @RequestParam(name = "period", defaultValue = "monthly", required = false) String period,
-            @RequestParam(name = "date",defaultValue = "", required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date
-            ){
+            @RequestParam(name = "period", defaultValue = "daily", required = false) String period,
+            @RequestParam(name = "date", defaultValue = "", required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date
+    ) {
         if (date == null) {
             date = LocalDate.now(); // Sử dụng ngày hiện tại nếu không có giá trị truyền vào
         }
         return deliveryOrderService.getRevenueByPeriod(pageNo, pageSize, sortBy, sortDir, period, date.plusDays(1));
     }
 
+    @Operation(
+            summary = "Get revenue by daily, monthly or yearly",
+            description = "Get revenue detail by period and LocalDate in order to show in admin panel. \n" +
+                    "Default sorted by orderDate. SortBy value= shippedDate, status, orderValue,...",
+            tags = {"Admin"})
+    @ApiResponses(
+            value = {
+                    @ApiResponse(responseCode = "200", description = "Revenue by period retrieve successfully",
+                            content = @Content(
+                                    examples = @ExampleObject(value = """
+                                             {
+                                                                "http_status": 200,
+                                                                "time_stamp": "07/07/2024 14:09:07",
+                                                                "message": "Successfully retrieved revenue by daily",
+                                                                "data": {
+                                                                  "content": [
+                                                                    {
+                                                                      "Delivery_order_id": 1,
+                                                                      "User_name": "Vo VAN T",
+                                                                      "Package_name": [
+                                                                        "Combo Bò nướng mĩ vị Tailor",
+                                                                        "Lẩu Tứ Xuyên"
+                                                                      ],
+                                                                      "Delivery_order_status": "Delivered",
+                                                                      "Delivery_order_date": "2024-07-01T05:49:21.000+00:00",
+                                                                      "Delivery_shipped_date": "2024-07-01T06:50:39.000+00:00",
+                                                                      "Shipper_name": "Shipper Tinh",
+                                                                      "Delivery_order_value": 1400000
+                                                                    },
+                                                                    {
+                                                                      "Delivery_order_id": 2,
+                                                                      "User_name": "Vo VAN T",
+                                                                      "Package_name": [
+                                                                        "Combo Bò nướng mĩ vị Tailor"
+                                                                      ],
+                                                                      "Delivery_order_status": "Delivered",
+                                                                      "Delivery_order_date": "2024-07-01T05:49:24.000+00:00",
+                                                                      "Delivery_shipped_date": "2024-07-01T06:50:48.000+00:00",
+                                                                      "Shipper_name": "Shipper Tinh",
+                                                                      "Delivery_order_value": 400000
+                                                                    }
+                                                                  ],
+                                                                  "page_no": 0,
+                                                                  "page_size": 10,
+                                                                  "total_elements": 2,
+                                                                  "total_pages": 1,
+                                                                  "last": true
+                                                                }
+                                                              }
+                                            """))),
+                    @ApiResponse(responseCode = "400", description = "Fail to retrieve revenue by period")
+            }
+    )
+    @GetMapping(value = "/revenue-details")
+    public ResponseEntity<Object> getRevenueDetailByPeriod(
+            @RequestParam(name = "pageNo", defaultValue = AppConstants.DEFAULT_PAGE_NUMBER, required = false) int pageNo,
+            @RequestParam(name = "pageSize", defaultValue = AppConstants.DEFAULT_PAGE_SIZE, required = false) int pageSize,
+            @RequestParam(name = "sortBy", defaultValue = AppConstants.DEFAULT_SORT_BY, required = false) String sortBy,
+            @RequestParam(name = "sortDir", defaultValue = AppConstants.DEFAULT_SORT_DIRECTION, required = false) String sortDir,
+            @RequestParam(name = "period", defaultValue = "daily", required = false) String period,
+            @RequestParam(name = "date", defaultValue = "", required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date
+    ) {
+        if (date == null) {
+            date = LocalDate.now();
+        }
+        return deliveryOrderService.getRevenueDetailByPeriod(pageNo, pageSize, sortBy, sortDir, period, date);
+    }
 
 
 }

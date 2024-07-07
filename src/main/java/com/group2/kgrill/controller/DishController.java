@@ -63,7 +63,7 @@ public class DishController {
                                     """))),
             @ApiResponse(responseCode = "400", description = "Failed to get dish's list"),
     })
-    @PostMapping(value = "/search/dish")
+    @PostMapping(value = "/dish/search")
     public ResponseEntity<Object> getAllDishByManager(@Parameter(description = "Page number, starting from 1", required = true) @RequestParam(name = "pageNumber", defaultValue = "1") int pageNumber,
                                                       @Parameter(description = "Page size, 10 dishes max", required = true) @RequestParam(name = "pageSize", defaultValue = "10") int pageSize,
                                                       @Parameter(description = "Sort field default by Id", required = true) @RequestParam(name = "sortField", defaultValue = "id") String sortField,
