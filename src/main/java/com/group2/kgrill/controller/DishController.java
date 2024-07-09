@@ -29,47 +29,6 @@ public class DishController {
         this.dishService = dishService;
     }
 
-
-    @Operation(
-            summary = "Search dish",
-            description = "Search dish by name and price",
-            tags = {"Dish"})
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Get dish successfully",
-                    content = @Content(
-                            examples = @ExampleObject(value = """
-                                        {
-                                           "http_status": 200,
-                                           "time_stamp": "06/02/2024 17:25:41",
-                                           "message": "Successfully retrieved dishes list information",
-                                           "data": {
-                                             "content": [
-                                               {
-                                                 "dish_id": "a9126139-3c11-47ba-8493-cf7e480c3645",
-                                                 "dish_name": "Bò Mĩ",
-                                                 "dish_price": "289999",
-                                                 }
-                                                  ],
-                                             "page_no": "0",
-                                             "page_size": "1",
-                                             "total_elements": "10",
-                                             "total_pages": "1",
-                                             "last": false,
-                                           }
-                                         }
-                                    """))),
-            @ApiResponse(responseCode = "400", description = "Failed to get dish"),
-    })
-    @GetMapping("/dish/search-by-filter")
-    public ResponseEntity<Object> searchDishByFilter(@Parameter(description = "Page number, starting from 1", required = true) @RequestParam(name = "pageNumber", defaultValue = "1") int pageNumber,
-                                                     @Parameter(description = "Page size, 10 dishes max", required = true) @RequestParam(name = "pageSize", defaultValue = "10") int pageSize,
-                                                     @Parameter(description = "Sort field default by Id", required = true) @RequestParam(name = "sortField", defaultValue = "id") String sortField,
-                                                     @Parameter(description = "Sort by ascending or descending") @RequestParam(name = "sortDir", defaultValue = "asc") String sortDir,
-//                                                              @Parameter(description = "Filter by name/size/") @RequestParam(name = "filter", required = false) String filter,
-                                                     @Parameter(description = "Search keyword")@RequestParam("keyword") String keyword){
-        return ResponseEntity.ok(dishService.searchDishByFilter(pageNumber, pageSize, sortField, sortDir, keyword));
-    }
-
     @Operation(
             summary = "Get dish's list",
             description = "Get all current dishes",
@@ -187,17 +146,25 @@ public class DishController {
                     content = @Content(
                             examples = @ExampleObject(value = """
                                         {
-                                           "http_status": 200,
+                                          "http_status": 200,
                                            "time_stamp": "06/02/2024 17:25:41",
                                            "message": "Create new dish successfully",
                                            "data": {
                                              "content": [
                                                {
-                                                 "dish_id": "a9126139-3c11-47ba-8493-cf7e480c3645",
-                                                 "dish_name": "Bò Mĩ",
-                                                 "dish_price": "289999",
-                                                 }
-                                                  ],
+                                                "dish_id": 0,
+                                                      "dish_name": " Bò Nam Phi",
+                                                      "dish_price": 99000,
+                                                      "dish_category": {
+                                                        "category_id": 0,
+                                                        "category_name": "Dĩa rau"
+                                                      },
+                                                      "dish_ingredient_list": [
+                                                        {
+                                                          "ingredient_id": 0,
+                                                          "ingredient_name": "Tôm"
+                                                        }
+                                                      ],
                                              "page_no": "0",
                                              "page_size": "1",
                                              "total_elements": "10",
@@ -221,7 +188,38 @@ public class DishController {
             description = "Update dish for manager",
             tags = {"Dish"})
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Update dish successfully"),
+            @ApiResponse(responseCode = "200", description = "Update dish successfully",
+                    content = @Content(
+                            examples = @ExampleObject(value = """
+                                        {
+                                          "http_status": 200,
+                                           "time_stamp": "06/02/2024 17:25:41",
+                                           "message": "Create new dish successfully",
+                                           "data": {
+                                             "content": [
+                                               {
+                                                "dish_id": 0,
+                                                      "dish_name": " Bò Nam Phi",
+                                                      "dish_price": 99000,
+                                                      "dish_category": {
+                                                        "category_id": 0,
+                                                        "category_name": "Dĩa rau"
+                                                      },
+                                                      "dish_ingredient_list": [
+                                                        {
+                                                          "ingredient_id": 0,
+                                                          "ingredient_name": "Tôm"
+                                                        }
+                                                      ],
+                                             "page_no": "0",
+                                             "page_size": "1",
+                                             "total_elements": "10",
+                                             "total_pages": "1",
+                                             "last": false,
+                                           }
+                                         }
+                                    """))),
+
             @ApiResponse(responseCode = "400", description = "Failed to update dish"),
     })
 
