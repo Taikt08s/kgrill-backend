@@ -3,6 +3,7 @@ package com.group2.kgrill.controller;
 import com.swd392.group2.kgrill_service.dto.CustomUserProfile;
 import com.swd392.group2.kgrill_service.dto.UserProfileDto;
 import com.swd392.group2.kgrill_service.service.DeliveryOrderService;
+import com.swd392.group2.kgrill_service.service.ShipperService;
 import com.swd392.group2.kgrill_service.service.UserService;
 import com.swd392.group2.kgrill_service.util.AppConstants;
 import io.swagger.v3.oas.annotations.Operation;
@@ -30,8 +31,9 @@ import java.util.UUID;
 @Tag(name = "Admin", description = "Controller responsible for handling admin operations")
 public class AdminController {
 
-    private final UserService userService;
     private final DeliveryOrderService deliveryOrderService;
+    private final ShipperService shipperService;
+    private final UserService userService;
 
     @Operation(
             summary = "View user profile by admin",
@@ -245,7 +247,105 @@ public class AdminController {
         if (date == null) {
             date = LocalDate.now();
         }
-        return deliveryOrderService.getRevenueDetailByPeriod(pageNo, pageSize, sortBy, sortDir, period, date);
+        return deliveryOrderService.getDeliveryOrderDetailByAdmin(pageNo, pageSize, sortBy, sortDir, period, date);
+    }
+
+    @Operation(
+            summary = "Get shipper's list of delivery order",
+            description = "Get shipper's list of delivery order to show in admin panel . \n" +
+                    "Default sorted by id.",
+            tags = {"Admin"})
+    @ApiResponses(
+            value = {
+                    @ApiResponse(responseCode = "200", description = "shipper's list of delivery order retrieve successfully",
+                            content = @Content(
+                                    examples = @ExampleObject(value = """
+                                            {
+                                              "http_status": 200,
+                                              "time_stamp": "07/12/2024 18:20:46",
+                                              "message": "Successfully retrieved Delivery Order Detail by shipper",
+                                              "data": {
+                                                "content": [
+                                                  {
+                                                    "Delivery_order_id": 1,
+                                                    "User_name": "dinh tai",
+                                                    "Package_name": [
+                                                      "Combo Nướng GoGi Combo Sườn bò Mỹ bỏ xương & Thăn nội bò Mỹ Mua 1 Tặng 1"
+                                                    ],
+                                                    "Delivery_order_status": "Delivered",
+                                                    "Delivery_order_date": "2024-07-10T14:19:44.000+00:00",
+                                                    "Delivery_shipped_date": "2024-07-10T15:20:03.000+00:00",
+                                                    "Shipper_name": "Shipper Tinh",
+                                                    "Delivery_order_value": 594000
+                                                  }
+                                                ],
+                                                "page_no": 0,
+                                                "page_size": 10,
+                                                "total_elements": 2,
+                                                "total_pages": 1,
+                                                "last": true
+                                              }
+                                            }
+                                            """))),
+                    @ApiResponse(responseCode = "400", description = "Fail to retrieve shipper's list of delivery order")
+            }
+    )
+    @GetMapping(value = "/shipper-tracking/detail")
+    public ResponseEntity<Object> getDeliveryOrderByShipperId(
+            @RequestParam(name = "pageNo", defaultValue = AppConstants.DEFAULT_PAGE_NUMBER, required = false) int pageNo,
+            @RequestParam(name = "pageSize", defaultValue = AppConstants.DEFAULT_PAGE_SIZE, required = false) int pageSize,
+            @RequestParam(name = "sortBy", defaultValue = AppConstants.DEFAULT_SORT_BY, required = false) String sortBy,
+            @RequestParam(name = "sortDir", defaultValue = AppConstants.DEFAULT_SORT_DIRECTION, required = false) String sortDir,
+            @RequestParam(name = "shipperId", required = true) int shipperId
+
+    ) {
+        return deliveryOrderService.getDeliveryOrderDetailByShipperId(pageNo, pageSize, sortBy, sortDir, shipperId);
+    }
+
+    @Operation(
+            summary = "Get list of shippers by admin",
+            description = "Get list of shippers that showing total order in admin panel . \n" +
+                    "Default sorted by id.",
+            tags = {"Admin"})
+    @ApiResponses(
+            value = {
+                    @ApiResponse(responseCode = "200", description = "list of shippers retrieve successfully",
+                            content = @Content(
+                                    examples = @ExampleObject(value = """
+                                            {
+                                              "http_status": 200,
+                                              "time_stamp": "07/12/2024 18:43:15",
+                                              "message": "Successfully retrieved all shippers",
+                                              "data": {
+                                                "content": [
+                                                  {
+                                                    "id": 1,
+                                                    "uuid": "xxxxxxxx-xd3b-44xx-axx0-8953fxxxxxxx",
+                                                    "name": "Shipper Tinh",
+                                                    "total_order": 2,
+                                                    "completed_order": 1,
+                                                    "cancelled_order": 1
+                                                  }
+                                                ],
+                                                "page_no": 0,
+                                                "page_size": 10,
+                                                "total_elements": 2,
+                                                "total_pages": 1,
+                                                "last": true
+                                              }
+                                            }
+                                            """))),
+                    @ApiResponse(responseCode = "400", description = "Fail to retrieve list of shippers")
+            }
+    )
+    @GetMapping(value = "/shipper-tracking")
+    public ResponseEntity<Object> trackShipperOrder(
+            @RequestParam(name = "pageNo", defaultValue = AppConstants.DEFAULT_PAGE_NUMBER, required = false) int pageNo,
+            @RequestParam(name = "pageSize", defaultValue = AppConstants.DEFAULT_PAGE_SIZE, required = false) int pageSize,
+            @RequestParam(name = "sortBy", defaultValue = AppConstants.DEFAULT_SORT_BY, required = false) String sortBy,
+            @RequestParam(name = "sortDir", defaultValue = AppConstants.DEFAULT_SORT_DIRECTION, required = false) String sortDir
+    ) {
+        return shipperService.getAllShippersByAdmin(pageNo, pageSize, sortBy, sortDir);
     }
 
 
