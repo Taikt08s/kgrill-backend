@@ -46,4 +46,44 @@ public class DeliveryOrderController {
         return deliveryOrderService.cancelOrderForManager(orderId);
     }
 
+    @Operation(
+            summary = "Get cart detail",
+            description = "Get cart detail after succeed login",
+            tags = {"Delivery Order"})
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Get cart detail successfully"),
+            @ApiResponse(responseCode = "400", description = "Failed to get cart detail"),
+    })
+    @GetMapping(value = "/cart-detail")
+    public ResponseEntity<Object> getCartDetail(@NotNull UUID userId) {
+        return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Successfully get cart detail", deliveryOrderService.getOrderDetailAfterLogin(userId));
+    }
+
+    @Operation(
+            summary = "Add a package to cart",
+            description = "Add a available package to cart",
+            tags = {"Delivery Order"})
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "add to cart successfully"),
+            @ApiResponse(responseCode = "400", description = "Failed to add to cart"),
+    })
+    @PostMapping(value = "/add-package")
+    public ResponseEntity<Object> addAFoodPackageToCart(@NotNull UUID userId, @NotNull int packageId, @NotNull int quantity) {
+        deliveryOrderService.addPackageToDeliveryOrder(userId, packageId, quantity);
+        return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Successfully add to cart", null);
+    }
+
+    @Operation(
+            summary = "Update cart detail",
+            description = "Update cart detail",
+            tags = {"Delivery Order"})
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "update cart detail successfully"),
+            @ApiResponse(responseCode = "400", description = "Failed to update cart detail"),
+    })
+    @PostMapping(value = "/update-order-detail")
+    public ResponseEntity<Object> updateCartDetail(@NotNull int orderDetailId, @NotNull int quantity) {
+        deliveryOrderService.updateOrderDetail(orderDetailId, quantity);
+        return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Successfully update cart detail", null);
+    }
 }
