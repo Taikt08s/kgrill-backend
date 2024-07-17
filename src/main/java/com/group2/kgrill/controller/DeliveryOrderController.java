@@ -41,6 +41,10 @@ public class DeliveryOrderController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Failed to update delivery order location");
         }
     }
+    @GetMapping("/cancel-order/{orderId}")
+    public ResponseEntity<Object> cancelOrderForManager(@PathVariable Long orderId){
+        return deliveryOrderService.cancelOrderForManager(orderId);
+    }
 
     @Operation(
             summary = "Get cart detail",
