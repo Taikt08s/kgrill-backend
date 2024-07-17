@@ -4,7 +4,6 @@ import com.swd392.group2.kgrill_service.dto.UserProfileDto;
 import com.swd392.group2.kgrill_service.service.CloudinaryUploadService;
 import com.swd392.group2.kgrill_service.service.UserService;
 
-import com.swd392.group2.kgrill_service.util.AppConstants;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.ExampleObject;

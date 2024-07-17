@@ -1,7 +1,6 @@
 package com.group2.kgrill.controller;
 
 
-import com.swd392.group2.kgrill_service.dto.DishDTO;
 import com.swd392.group2.kgrill_service.dto.request.DishRequest;
 import com.swd392.group2.kgrill_service.exception.CustomSuccessHandler;
 import com.swd392.group2.kgrill_service.service.DishService;
@@ -15,8 +14,6 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/")

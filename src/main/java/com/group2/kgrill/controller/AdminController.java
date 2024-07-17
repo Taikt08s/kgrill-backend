@@ -1,7 +1,6 @@
 package com.group2.kgrill.controller;
 
 import com.swd392.group2.kgrill_service.dto.CustomUserProfile;
-import com.swd392.group2.kgrill_service.dto.UserProfileDto;
 import com.swd392.group2.kgrill_service.service.DeliveryOrderService;
 import com.swd392.group2.kgrill_service.service.ShipperService;
 import com.swd392.group2.kgrill_service.service.UserService;
@@ -12,17 +11,14 @@ import io.swagger.v3.oas.annotations.media.ExampleObject;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.UUID;
 
 @RestController
