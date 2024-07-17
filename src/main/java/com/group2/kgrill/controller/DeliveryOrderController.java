@@ -49,7 +49,7 @@ public class DeliveryOrderController {
     @Operation(
             summary = "Get cart detail",
             description = "Get cart detail after succeed login",
-            tags = {"Delivery Order"})
+            tags = {"Delivery Order Mobile"})
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Get cart detail successfully"),
             @ApiResponse(responseCode = "400", description = "Failed to get cart detail"),
@@ -62,9 +62,9 @@ public class DeliveryOrderController {
     @Operation(
             summary = "Add a package to cart",
             description = "Add a available package to cart",
-            tags = {"Delivery Order"})
+            tags = {"Delivery Order Mobile"})
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "add to cart successfully"),
+            @ApiResponse(responseCode = "200", description = "Add to cart successfully"),
             @ApiResponse(responseCode = "400", description = "Failed to add to cart"),
     })
     @PostMapping(value = "/add-package")
@@ -76,14 +76,27 @@ public class DeliveryOrderController {
     @Operation(
             summary = "Update cart detail",
             description = "Update cart detail",
-            tags = {"Delivery Order"})
+            tags = {"Delivery Order Mobile"})
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "update cart detail successfully"),
+            @ApiResponse(responseCode = "200", description = "Update cart detail successfully"),
             @ApiResponse(responseCode = "400", description = "Failed to update cart detail"),
     })
     @PostMapping(value = "/update-order-detail")
     public ResponseEntity<Object> updateCartDetail(@NotNull int orderDetailId, @NotNull int quantity) {
         deliveryOrderService.updateOrderDetail(orderDetailId, quantity);
         return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Successfully update cart detail", null);
+    }
+
+    @Operation(
+            summary = "Get order history",
+            description = "Get order history of current user",
+            tags = {"Delivery Order Mobile"})
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Get order history successfully"),
+            @ApiResponse(responseCode = "400", description = "Failed to get order history"),
+    })
+    @PostMapping(value = "/order-history")
+    public ResponseEntity<Object> getOrderHistory(@NotNull UUID userId) {
+        return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Successfully get order history", deliveryOrderService.getOrderHistory(userId));
     }
 }
