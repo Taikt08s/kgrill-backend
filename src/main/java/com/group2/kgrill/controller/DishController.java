@@ -236,5 +236,5 @@ public class DishController {
     public ResponseEntity<String> dishDelete(@PathVariable("id") int id){
         dishService.deleteDish(id);
         return new ResponseEntity<>("Delete successfully", HttpStatus.OK);
-    } 
+    }
 }
