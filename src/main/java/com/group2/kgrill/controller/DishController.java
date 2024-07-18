@@ -1,7 +1,6 @@
 package com.group2.kgrill.controller;
 
 
-import com.swd392.group2.kgrill_service.dto.DishDTO;
 import com.swd392.group2.kgrill_service.dto.request.DishRequest;
 import com.swd392.group2.kgrill_service.exception.CustomSuccessHandler;
 import com.swd392.group2.kgrill_service.service.DishService;
@@ -15,8 +14,6 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/")
@@ -134,8 +131,10 @@ public class DishController {
                                                      @Parameter(description = "Sort field default by Id", required = true) @RequestParam(name = "sortField", defaultValue = "id") String sortField,
                                                      @Parameter(description = "Sort by ascending or descending") @RequestParam(name = "sortDir", defaultValue = "asc") String sortDir,
 //                                                              @Parameter(description = "Filter by name/size/") @RequestParam(name = "filter", required = false) String filter,
-                                                     @Parameter(description = "Search keyword")@RequestParam("keyword") String keyword){
-        return ResponseEntity.ok(dishService.searchDishByFilter(pageNumber, pageSize, sortField, sortDir, keyword));
+                                                     @Parameter(description = "Search keyword") @RequestParam("keyword") String keyword,
+                                                     @Parameter(description = "Min Price") @RequestParam("minPrice") double minPrice,
+                                                     @Parameter(description = "Max price") @RequestParam("maxPrice") double maxPrice){
+        return ResponseEntity.ok(dishService.searchDishByFilter(pageNumber, pageSize, minPrice, maxPrice, sortField, sortDir, keyword));
     }
     @Operation(
             summary = "Create new dish",

@@ -1,6 +1,7 @@
 package com.group2.kgrill.controller;
 
 import com.swd392.group2.kgrill_service.dto.DeliveryLocationDTO;
+import com.swd392.group2.kgrill_service.exception.CustomSuccessHandler;
 import com.swd392.group2.kgrill_service.service.DeliveryOrderService;
 import com.swd392.group2.kgrill_service.util.AppConstants;
 import io.swagger.v3.oas.annotations.Operation;
@@ -42,6 +43,23 @@ public class DeliveryOrderController {
         } else {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Failed to update delivery order location");
         }
+    }
+    @GetMapping("/cancel-order/{orderId}")
+    public ResponseEntity<Object> cancelOrderForManager(@PathVariable Long orderId){
+        return deliveryOrderService.cancelOrderForManager(orderId);
+    }
+
+    @Operation(
+            summary = "Get cart detail",
+            description = "Get cart detail after succeed login",
+            tags = {"Delivery Order Mobile"})
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Get cart detail successfully"),
+            @ApiResponse(responseCode = "400", description = "Failed to get cart detail"),
+    })
+    @GetMapping(value = "/cart-detail")
+    public ResponseEntity<Object> getCartDetail(@NotNull UUID userId) {
+        return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Successfully get cart detail", deliveryOrderService.getOrderDetailAfterLogin(userId));
     }
 
     @Operation(
@@ -93,7 +111,44 @@ public class DeliveryOrderController {
         return deliveryOrderService.getDeliveryOrderByStatus(pageNo, pageSize, sortBy, sortDir, "Preparing");
     }
 
+    @Operation(
+            summary = "Add a package to cart",
+            description = "Add a available package to cart",
+            tags = {"Delivery Order Mobile"})
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Add to cart successfully"),
+            @ApiResponse(responseCode = "400", description = "Failed to add to cart"),
+    })
+    @PostMapping(value = "/add-package")
+    public ResponseEntity<Object> addAFoodPackageToCart(@NotNull UUID userId, @NotNull int packageId, @NotNull int quantity) {
+        deliveryOrderService.addPackageToDeliveryOrder(userId, packageId, quantity);
+        return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Successfully add to cart", null);
+    }
 
+    @Operation(
+            summary = "Update cart detail",
+            description = "Update cart detail",
+            tags = {"Delivery Order Mobile"})
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Update cart detail successfully"),
+            @ApiResponse(responseCode = "400", description = "Failed to update cart detail"),
+    })
+    @PostMapping(value = "/update-order-detail")
+    public ResponseEntity<Object> updateCartDetail(@NotNull int orderDetailId, @NotNull int quantity) {
+        deliveryOrderService.updateOrderDetail(orderDetailId, quantity);
+        return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Successfully update cart detail", null);
+    }
 
-
+    @Operation(
+            summary = "Get order history",
+            description = "Get order history of current user",
+            tags = {"Delivery Order Mobile"})
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Get order history successfully"),
+            @ApiResponse(responseCode = "400", description = "Failed to get order history"),
+    })
+    @PostMapping(value = "/order-history")
+    public ResponseEntity<Object> getOrderHistory(@NotNull UUID userId) {
+        return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Successfully get order history", deliveryOrderService.getOrderHistory(userId));
+    }
 }

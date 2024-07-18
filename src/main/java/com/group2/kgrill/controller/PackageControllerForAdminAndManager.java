@@ -38,7 +38,6 @@ public class PackageControllerForAdminAndManager {
                                                               @Parameter(description = "Page size, 10 students max", required = true) @RequestParam(name = "pageSize", defaultValue = "10") int pageSize,
                                                               @Parameter(description = "Sort field default by Id", required = true) @RequestParam(name = "sortField", defaultValue = "id") String sortField,
                                                               @Parameter(description = "Sort by ascending or descending") @RequestParam(name = "sortDir", defaultValue = "asc") String sortDir,
-//                                                              @Parameter(description = "Filter by name/size/") @RequestParam(name = "filter", required = false) String filter,
                                                               @Parameter(description = "Search keyword") @RequestParam(value = "value", required = false) String value) {
 
         return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Successfully get package list", packageService.getAllPackagePages(pageNumber, pageSize, sortField, sortDir));

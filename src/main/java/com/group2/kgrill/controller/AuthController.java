@@ -37,7 +37,6 @@ public class AuthController {
 
     private final LogoutServiceConfig logoutServiceConfig;
 
-
     @Operation(summary = "Register a new account", description = "To register a new account, all information must be filled out completely and cannot be left blank." + " Upon successful registration, a verification email will be sent to the user's Gmail account.")
     @ApiResponses(value = {@ApiResponse(responseCode = "202", description = "Successfully Registered", content = @Content(examples = @ExampleObject(value = """
             {
