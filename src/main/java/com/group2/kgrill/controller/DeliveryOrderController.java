@@ -63,7 +63,7 @@ public class DeliveryOrderController {
     }
 
     @Operation(
-            summary = "View Ordering queue by Manager ",
+            summary = "View Ordering queue of users for Manager ",
             description = "View all user's order information. user's name, address, package name,.... ",
             tags = {"Delivery Order"})
     @ApiResponses(value = {
