@@ -308,28 +308,28 @@ public class AdminController {
                     @ApiResponse(responseCode = "200", description = "list of shippers retrieve successfully",
                             content = @Content(
                                     examples = @ExampleObject(value = """
-                                            {
-                                              "http_status": 200,
-                                              "time_stamp": "07/12/2024 18:43:15",
-                                              "message": "Successfully retrieved all shippers",
-                                              "data": {
-                                                "content": [
-                                                  {
-                                                    "id": 1,
-                                                    "uuid": "xxxxxxxx-xd3b-44xx-axx0-8953fxxxxxxx",
-                                                    "name": "Shipper Tinh",
-                                                    "total_order": 2,
-                                                    "completed_order": 1,
-                                                    "cancelled_order": 1
-                                                  }
-                                                ],
-                                                "page_no": 0,
-                                                "page_size": 10,
-                                                "total_elements": 2,
-                                                "total_pages": 1,
-                                                "last": true
-                                              }
-                                            }
+                                              {
+                                                     "Delivery_Order_Id": 7,
+                                                     "User_name": "dinh tai",
+                                                     "Phone": "0977833674",
+                                                     "Package_name": [
+                                                       "Combo nướng lẩu GoGi - Combo GoGi Smart",
+                                                       "Combo nướng lẩu GoGi - Combo Daehak"
+                                                     ],
+                                                     "Order_value": 1298000,
+                                                     "Address": "asdasda",
+                                                     "Latitude": 21.123214,
+                                                     "Longitude": 101.123123,
+                                                     "Order_date": "2024-07-16 17:23:26.0",
+                                                     "Order_status": "Preparing"
+                                                   }
+                                                 ],
+                                                 "page_no": 0,
+                                                 "page_size": 10,
+                                                 "total_elements": 2,
+                                                 "total_pages": 1,
+                                                 "last": true
+                                               }
                                             """))),
                     @ApiResponse(responseCode = "400", description = "Fail to retrieve list of shippers")
             }
