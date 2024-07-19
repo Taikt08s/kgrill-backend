@@ -191,7 +191,7 @@ public class AdminController {
                                              {
                                                                 "http_status": 200,
                                                                 "time_stamp": "07/07/2024 14:09:07",
-                                                                "message": "Successfully retrieved revenue by daily",
+                                                                "message": "Successfully retrieved revenue",
                                                                 "data": {
                                                                   "content": [
                                                                     {
