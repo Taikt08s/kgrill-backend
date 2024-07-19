@@ -59,8 +59,7 @@ public class PackageControllerForAdminAndManager {
     })
     @PostMapping(value = "/add-package")
     public ResponseEntity<Object> addNewFoodPackage(@RequestBody @Valid PackageRequest pkgRequest) {
-        packageService.addPackage(pkgRequest);
-        return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Add a new package successfully", "");
+        return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Add a new package successfully", packageService.addPackage(pkgRequest));
     }
 
     @Operation(
