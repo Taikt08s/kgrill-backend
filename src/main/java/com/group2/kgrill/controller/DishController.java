@@ -133,8 +133,8 @@ public class DishController {
 //                                                              @Parameter(description = "Filter by name/size/") @RequestParam(name = "filter", required = false) String filter,
                                                      @Parameter(description = "Search keyword") @RequestParam(value = "keyword", required = false) String keyword,
                                                      @Parameter(description = "Search dish's category") @RequestParam(value="category", required = false) String category,
-                                                     @Parameter(description = "Min Price") @RequestParam(value="minPrice", required = false) double minPrice,
-                                                     @Parameter(description = "Max price") @RequestParam(value="maxPrice", required = false) double maxPrice){
+                                                     @Parameter(description = "Min Price") @RequestParam(value="minPrice", required = false) Double minPrice,
+                                                     @Parameter(description = "Max price") @RequestParam(value="maxPrice", required = false) Double maxPrice){
         return ResponseEntity.ok(dishService.searchDishByFilter(pageNumber, pageSize, minPrice, maxPrice, sortField, sortDir, keyword, category));
     }
     @Operation(
