@@ -46,6 +46,7 @@ public class DeliveryOrderController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Failed to update delivery order location");
         }
     }
+
     @Operation(
             summary = "Cancel order for manager",
             description = "Cancel orders which have status different from 'Delivered', if orders is 'Delivered' cannot be cancel",
@@ -57,6 +58,22 @@ public class DeliveryOrderController {
     @GetMapping("/cancel-order/{orderId}")
     public ResponseEntity<Object> cancelOrderForManager(@PathVariable Long orderId){
         return deliveryOrderService.cancelOrderForManager(orderId);
+    }
+
+    @Operation(
+            summary = "Accept order for manager",
+            description = "Accept order which has status 'Processing', and change its status to 'Preparing'",
+            tags = {"Delivery Order"})
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Accept order successfully"),
+            @ApiResponse(responseCode = "400", description = "Failed to accept order"),
+    })
+    @GetMapping("/accept-order")
+    public ResponseEntity<Object> acceptOrderForManager(@NotNull long orderId){
+        if (deliveryOrderService.acceptOrderForManager(orderId)){
+            return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Successfully accept order", "");
+        }
+        return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Failed to accept order", "");
     }
 
     @Operation(
