@@ -131,10 +131,11 @@ public class DishController {
                                                      @Parameter(description = "Sort field default by Id", required = true) @RequestParam(name = "sortField", defaultValue = "id") String sortField,
                                                      @Parameter(description = "Sort by ascending or descending") @RequestParam(name = "sortDir", defaultValue = "asc") String sortDir,
 //                                                              @Parameter(description = "Filter by name/size/") @RequestParam(name = "filter", required = false) String filter,
-                                                     @Parameter(description = "Search keyword") @RequestParam("keyword") String keyword,
-                                                     @Parameter(description = "Min Price") @RequestParam("minPrice") double minPrice,
-                                                     @Parameter(description = "Max price") @RequestParam("maxPrice") double maxPrice){
-        return ResponseEntity.ok(dishService.searchDishByFilter(pageNumber, pageSize, minPrice, maxPrice, sortField, sortDir, keyword));
+                                                     @Parameter(description = "Search keyword") @RequestParam(value = "keyword", required = false) String keyword,
+                                                     @Parameter(description = "Search dish's category") @RequestParam(value="category", required = false) String category,
+                                                     @Parameter(description = "Min Price") @RequestParam(value="minPrice", required = false) double minPrice,
+                                                     @Parameter(description = "Max price") @RequestParam(value="maxPrice", required = false) double maxPrice){
+        return ResponseEntity.ok(dishService.searchDishByFilter(pageNumber, pageSize, minPrice, maxPrice, sortField, sortDir, keyword, category));
     }
     @Operation(
             summary = "Create new dish",

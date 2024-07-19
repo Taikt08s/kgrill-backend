@@ -44,6 +44,14 @@ public class DeliveryOrderController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Failed to update delivery order location");
         }
     }
+    @Operation(
+            summary = "Cancel order for manager",
+            description = "Cancel orders which have status different from 'Delivered', if orders is 'Delivered' cannot be cancel",
+            tags = {"Delivery Order"})
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Cancel order successfully"),
+            @ApiResponse(responseCode = "400", description = "Order is being delivered and cannot be cancelled"),
+    })
     @GetMapping("/cancel-order/{orderId}")
     public ResponseEntity<Object> cancelOrderForManager(@PathVariable Long orderId){
         return deliveryOrderService.cancelOrderForManager(orderId);
