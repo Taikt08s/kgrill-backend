@@ -30,6 +30,7 @@ import java.io.UnsupportedEncodingException;
 
 @RestController
 @RequestMapping("auth")
+@CrossOrigin(origins = "*")
 @RequiredArgsConstructor
 @Tag(name = "Authentication", description = "Authentication required to use other resources.")
 public class AuthController {
