@@ -1,6 +1,7 @@
 package com.group2.kgrill.controller;
 
 import com.swd392.group2.kgrill_service.dto.DeliveryLocationDTO;
+import com.swd392.group2.kgrill_service.dto.mobiledto.DeliveryOrderDtoForCheckOut;
 import com.swd392.group2.kgrill_service.exception.CustomSuccessHandler;
 import com.swd392.group2.kgrill_service.service.DeliveryOrderService;
 import com.swd392.group2.kgrill_service.util.AppConstants;
@@ -10,6 +11,7 @@ import io.swagger.v3.oas.annotations.media.ExampleObject;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -155,8 +157,25 @@ public class DeliveryOrderController {
             @ApiResponse(responseCode = "200", description = "Get order history successfully"),
             @ApiResponse(responseCode = "400", description = "Failed to get order history"),
     })
-    @PostMapping(value = "/order-history")
+    @GetMapping(value = "/order-history")
     public ResponseEntity<Object> getOrderHistory(@NotNull UUID userId) {
         return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Successfully get order history", deliveryOrderService.getOrderHistory(userId));
+    }
+
+    @Operation(
+            summary = "Check out order",
+            description = "Check out an order",
+            tags = {"Delivery Order Mobile"})
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Check out order successfully"),
+            @ApiResponse(responseCode = "400", description = "Failed to check out order"),
+    })
+    @PostMapping(value = "/check-out-order")
+    public ResponseEntity<Object> checkOutOrder(@RequestBody @Valid DeliveryOrderDtoForCheckOut deliveryOrderDtoForCheckOut) {
+
+        if (deliveryOrderService.checkOutOrder(deliveryOrderDtoForCheckOut)){
+            return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Successfully check out order", "");
+        }
+        return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Failed to check out order", "");
     }
 }
