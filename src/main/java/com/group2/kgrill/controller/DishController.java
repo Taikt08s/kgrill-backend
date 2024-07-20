@@ -91,7 +91,7 @@ public class DishController {
                                     """))),
             @ApiResponse(responseCode = "400", description = "Failed to get dish"),
     })
-    @GetMapping("/{id}")
+    @GetMapping("/{id}/dish-detail")
     public ResponseEntity<DishRequest> dish(@PathVariable int id){
         return ResponseEntity.ok(dishService.getDishByID(id));
     }
