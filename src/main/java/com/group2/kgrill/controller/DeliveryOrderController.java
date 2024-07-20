@@ -136,7 +136,7 @@ public class DeliveryOrderController {
             @RequestParam(name = "sortBy", defaultValue = AppConstants.DEFAULT_SORT_BY, required = false) String sortBy,
             @RequestParam(name = "sortDir", defaultValue = AppConstants.DEFAULT_SORT_DIRECTION, required = false) String sortDir
     ) {
-        return deliveryOrderService.getDeliveryOrderByStatus(pageNo, pageSize, sortBy, sortDir, "Preparing");
+        return deliveryOrderService.getOrderingList(pageNo, pageSize, sortBy, sortDir);
     }
 
     @Operation(
