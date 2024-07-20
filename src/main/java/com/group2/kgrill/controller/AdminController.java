@@ -72,7 +72,7 @@ public class AdminController {
             @ApiResponse(responseCode = "401", description = "You have no permission to access this page"),
     })
     @GetMapping(value = "/management")
-    public ResponseEntity<Object> getAccountList(
+    public ResponseEntity<Object> accountList(
             @RequestParam(name = "pageNo", defaultValue = AppConstants.DEFAULT_PAGE_NUMBER, required = false) int pageNo,
             @RequestParam(name = "pageSize", defaultValue = AppConstants.DEFAULT_PAGE_SIZE, required = false) int pageSize,
             @RequestParam(name = "sortBy", defaultValue = AppConstants.DEFAULT_SORT_BY, required = false) String sortBy,
@@ -91,7 +91,7 @@ public class AdminController {
             @ApiResponse(responseCode = "400", description = "Fail to update account information"),
     })
     @PutMapping(value = "/management/account")
-    public ResponseEntity<Object> updateUserProfile(@NotNull UUID id,
+    public ResponseEntity<Object> userProfile(@NotNull UUID id,
                                                     @RequestBody @Valid CustomUserProfile customUserProfile) {
         return userService.updateUserProfileByAdmin(id, customUserProfile);
     }
@@ -121,7 +121,7 @@ public class AdminController {
             }
     )
     @GetMapping(value = "/number-of-orders")
-    public ResponseEntity<Object> getNumberOfOrders() {
+    public ResponseEntity<Object> NumberOfOrders() {
         return deliveryOrderService.getNumberOfOrders();
     }
 
@@ -164,7 +164,7 @@ public class AdminController {
             }
     )
     @GetMapping(value = "/revenue")
-    public ResponseEntity<Object> getRevenueByPeriod(
+    public ResponseEntity<Object> revenue(
             @RequestParam(name = "pageNo", defaultValue = AppConstants.DEFAULT_PAGE_NUMBER, required = false) int pageNo,
             @RequestParam(name = "pageSize", defaultValue = AppConstants.DEFAULT_PAGE_SIZE, required = false) int pageSize,
             @RequestParam(name = "sortBy", defaultValue = "orderDate", required = false) String sortBy,
@@ -232,7 +232,7 @@ public class AdminController {
             }
     )
     @GetMapping(value = "/revenue-details")
-    public ResponseEntity<Object> getRevenueDetailByPeriod(
+    public ResponseEntity<Object> revenueDetails(
             @RequestParam(name = "pageNo", defaultValue = AppConstants.DEFAULT_PAGE_NUMBER, required = false) int pageNo,
             @RequestParam(name = "pageSize", defaultValue = AppConstants.DEFAULT_PAGE_SIZE, required = false) int pageSize,
             @RequestParam(name = "sortBy", defaultValue = "orderDate", required = false) String sortBy,
@@ -287,7 +287,7 @@ public class AdminController {
             }
     )
     @GetMapping(value = "/shipper-tracking/detail")
-    public ResponseEntity<Object> getDeliveryOrderByShipperId(
+    public ResponseEntity<Object> shipperTrackingDetail(
             @RequestParam(name = "pageNo", defaultValue = AppConstants.DEFAULT_PAGE_NUMBER, required = false) int pageNo,
             @RequestParam(name = "pageSize", defaultValue = AppConstants.DEFAULT_PAGE_SIZE, required = false) int pageSize,
             @RequestParam(name = "sortBy", defaultValue = AppConstants.DEFAULT_SORT_BY, required = false) String sortBy,
@@ -335,7 +335,7 @@ public class AdminController {
             }
     )
     @GetMapping(value = "/shipper-tracking")
-    public ResponseEntity<Object> trackShipperOrder(
+    public ResponseEntity<Object> shipperTracking(
             @RequestParam(name = "pageNo", defaultValue = AppConstants.DEFAULT_PAGE_NUMBER, required = false) int pageNo,
             @RequestParam(name = "pageSize", defaultValue = AppConstants.DEFAULT_PAGE_SIZE, required = false) int pageSize,
             @RequestParam(name = "sortBy", defaultValue = AppConstants.DEFAULT_SORT_BY, required = false) String sortBy,
