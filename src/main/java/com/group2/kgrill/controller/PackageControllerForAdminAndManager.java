@@ -39,7 +39,7 @@ public class PackageControllerForAdminAndManager {
             @ApiResponse(responseCode = "200", description = "Get food package list successfully"),
             @ApiResponse(responseCode = "400", description = "Failed to get food package list"),
     })
-    @PostMapping(value = "/search-package")
+    @PostMapping(value = "/package-list")
     public ResponseEntity<Object> getAllFoodPackage(@Parameter(description = "Page number, starting from 1", required = true) @RequestParam(name = "pageNumber", defaultValue = "1") int pageNumber,
                                                     @Parameter(description = "Page size, 10 students max", required = true) @RequestParam(name = "pageSize", defaultValue = "10") int pageSize,
                                                     @Parameter(description = "Sort field default by Id", required = true) @RequestParam(name = "sortField", defaultValue = "id") String sortField,
@@ -57,7 +57,7 @@ public class PackageControllerForAdminAndManager {
             @ApiResponse(responseCode = "200", description = "Add a new package successfully"),
             @ApiResponse(responseCode = "400", description = "Failed to add a new package"),
     })
-    @PostMapping(value = "/add-package")
+    @PostMapping(value = "/new-package")
     public ResponseEntity<Object> addNewFoodPackage(@RequestBody @Valid PackageRequest pkgRequest) {
         return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Add a new package successfully", packageService.addPackage(pkgRequest));
     }
@@ -70,7 +70,7 @@ public class PackageControllerForAdminAndManager {
             @ApiResponse(responseCode = "200", description = "Get package detail successfully"),
             @ApiResponse(responseCode = "400", description = "Failed to get package detail"),
     })
-    @GetMapping(value = "/update-package")
+    @GetMapping(value = "/")
     public ResponseEntity<Object> getFoodPackageDetail(@NotNull int pkgId) {
         return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Successfully get package detail", packageService.getAPackageDetail(pkgId));
     }
@@ -83,7 +83,7 @@ public class PackageControllerForAdminAndManager {
             @ApiResponse(responseCode = "200", description = "Update food package successfully"),
             @ApiResponse(responseCode = "400", description = "Failed to update food package"),
     })
-    @PutMapping(value = "/update-package")
+    @PutMapping(value = "/")
     public ResponseEntity<Object> updateAFoodPackage(@RequestBody @Valid PackageRequest pkgRequest) {
         packageService.updatePackage(pkgRequest);
         return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Successfully update package", "");
@@ -97,7 +97,7 @@ public class PackageControllerForAdminAndManager {
             @ApiResponse(responseCode = "200", description = "Update package thumbnail successfully"),
             @ApiResponse(responseCode = "400", description = "Failed to update package thumbnail"),
     })
-    @PostMapping(value = "/update-package-thumbnail", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
+    @PostMapping(value = "/package-thumbnail", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     public ResponseEntity<Object> updateAFoodPackageThumbnail(@NotNull int packageId,
                                                               @RequestParam(value = "thumbnail_pic", required = false) MultipartFile thumbnailPicture) throws IOException {
         if (thumbnailPicture != null && !thumbnailPicture.isEmpty()) {
@@ -115,7 +115,7 @@ public class PackageControllerForAdminAndManager {
             @ApiResponse(responseCode = "200", description = "Delete food package successfully"),
             @ApiResponse(responseCode = "400", description = "Failed to delete food package"),
     })
-    @DeleteMapping(value = "/delete/{id}")
+    @DeleteMapping(value = "/{id}")
     public ResponseEntity<Object> deleteAFoodPackage(@PathVariable("id") int pkgId) {
         packageService.deletePackageById(pkgId);
         return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Successfully delete package", "");

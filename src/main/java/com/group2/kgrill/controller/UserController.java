@@ -1,6 +1,7 @@
 package com.group2.kgrill.controller;
 
 import com.swd392.group2.kgrill_service.dto.UserProfileDto;
+import com.swd392.group2.kgrill_service.dto.request.DeviceTokenRequest;
 import com.swd392.group2.kgrill_service.service.CloudinaryUploadService;
 import com.swd392.group2.kgrill_service.service.UserService;
 
@@ -108,6 +109,14 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to update user profile picture");
     }
 
-
+    @PostMapping("/save-device-token")
+    public ResponseEntity<?> saveDeviceToken(@RequestBody DeviceTokenRequest deviceTokenRequest) {
+        boolean result = userService.saveDeviceToken(deviceTokenRequest.getUserId(), deviceTokenRequest.getToken());
+        if (result) {
+            return ResponseEntity.ok("Device token saved successfully");
+        } else {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Failed to save device token");
+        }
+    }
 
 }
