@@ -11,6 +11,7 @@ import io.swagger.v3.oas.annotations.media.ExampleObject;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.constraints.NotNull;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -93,8 +94,8 @@ public class IngredientController {
             @ApiResponse(responseCode = "400", description = "Failed to get ingredient"),
     })
 
-    @GetMapping("/{id}/ingredient-detail")
-    public ResponseEntity<IngredientDTO> ingredient(@PathVariable("id") int id){
+    @GetMapping("ingredient/ingredient-detail")
+    public ResponseEntity<IngredientDTO> ingredient(@NotNull int id){
         return ResponseEntity.ok(ingredientService.getIngredientByID(id));
     }
     @Operation(
@@ -140,12 +141,20 @@ public class IngredientController {
             @ApiResponse(responseCode = "200", description = "Update ingredient successfully"),
             @ApiResponse(responseCode = "400", description = "Failed to update ingredient"),
     })
-    @PutMapping("/{id}")
+    @PutMapping("ingredient/{id}")
     public ResponseEntity<Object> ingredientUpdate(@RequestBody IngredientDTO ingredientDTO, @PathVariable("id") int id){
         ingredientService.updateIngredient(ingredientDTO, id);
         return new ResponseEntity<>("Update ingredient successfully",HttpStatus.OK);
     }
-    @DeleteMapping("/{id}/ingredient-removal")
+    @Operation(
+            summary = "Delete an ingredient",
+            description = "Delete an existed ingredient",
+            tags = {"Food Package"})
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Delete ingredient successfully"),
+            @ApiResponse(responseCode = "400", description = "Failed to delete ingredient"),
+    })
+    @DeleteMapping("ingredient/{id}/ingredient-removal")
     public ResponseEntity<String> ingredientDelete(@PathVariable("id") int id){
         ingredientService.deleteIngredient(id);
         return new ResponseEntity<>("Delete successfully", HttpStatus.OK);
