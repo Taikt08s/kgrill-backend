@@ -133,9 +133,10 @@ public class DeliveryOrderController {
             @RequestParam(name = "pageNo", defaultValue = AppConstants.DEFAULT_PAGE_NUMBER, required = false) int pageNo,
             @RequestParam(name = "pageSize", defaultValue = AppConstants.DEFAULT_PAGE_SIZE, required = false) int pageSize,
             @RequestParam(name = "sortBy", defaultValue = AppConstants.DEFAULT_SORT_BY, required = false) String sortBy,
-            @RequestParam(name = "sortDir", defaultValue = AppConstants.DEFAULT_SORT_DIRECTION, required = false) String sortDir
+            @RequestParam(name = "sortDir", defaultValue = AppConstants.DEFAULT_SORT_DIRECTION, required = false) String sortDir,
+            @RequestParam(name = "status", defaultValue = "Processing", required = false) String status
     ) {
-        return deliveryOrderService.getDeliveryOrderByStatus(pageNo, pageSize, sortBy, sortDir, "Preparing");
+        return deliveryOrderService.getDeliveryOrderByStatus(pageNo, pageSize, sortBy, sortDir, status);
     }
 
     @Operation(
