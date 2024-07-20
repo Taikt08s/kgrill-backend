@@ -11,6 +11,7 @@ import io.swagger.v3.oas.annotations.media.ExampleObject;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.constraints.NotNull;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -67,7 +68,7 @@ public class DishController {
         return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Successfully get package list", dishService.getAllDishes(pageNumber, pageSize, sortField, sortDir));
     }
     @Operation(
-            summary = "Get dish's list",
+            summary = "Get dish",
             description = "Get all current dishes",
             tags = {"Dish"})
     @ApiResponses(value = {
@@ -91,8 +92,8 @@ public class DishController {
                                     """))),
             @ApiResponse(responseCode = "400", description = "Failed to get dish"),
     })
-    @GetMapping("/{id}/dish-detail")
-    public ResponseEntity<DishRequest> dish(@PathVariable int id){
+    @GetMapping("dish/dish-detail")
+    public ResponseEntity<DishRequest> dish(@NotNull int id){
         return ResponseEntity.ok(dishService.getDishByID(id));
     }
     @Operation(
@@ -125,7 +126,7 @@ public class DishController {
                                     """))),
             @ApiResponse(responseCode = "400", description = "Failed to get dish"),
     })
-    @GetMapping("/dish/dish-details-by-filter")
+    @GetMapping("dish/dish-details-by-filter")
     public ResponseEntity<Object> searchDishByFilter(@Parameter(description = "Page number, starting from 1", required = true) @RequestParam(name = "pageNumber", defaultValue = "1") int pageNumber,
                                                      @Parameter(description = "Page size, 10 dishes max", required = true) @RequestParam(name = "pageSize", defaultValue = "10") int pageSize,
                                                      @Parameter(description = "Sort field default by Id", required = true) @RequestParam(name = "sortField", defaultValue = "id") String sortField,
@@ -223,14 +224,21 @@ public class DishController {
             @ApiResponse(responseCode = "400", description = "Failed to update dish"),
     })
 
-    @PutMapping("/")
+    @PutMapping("dish/")
     public ResponseEntity<Object> dishUpdate(@RequestBody DishRequest dishDTO){
 
         dishService.updateDish(dishDTO);
         return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Updated dish successfully", "");
     }
-
-    @DeleteMapping("/{id}")
+    @Operation(
+            summary = "Delete a dish",
+            description = "Delete an existed dish",
+            tags = {"Dish"})
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Delete dish successfully"),
+            @ApiResponse(responseCode = "400", description = "Failed to delete dish"),
+    })
+    @DeleteMapping("dish/{id}")
     public ResponseEntity<String> dishDelete(@PathVariable("id") int id){
         dishService.deleteDish(id);
         return new ResponseEntity<>("Delete successfully", HttpStatus.OK);
