@@ -1,6 +1,7 @@
 package com.group2.kgrill.controller;
 
 import com.swd392.group2.kgrill_service.exception.CustomSuccessHandler;
+import com.swd392.group2.kgrill_service.service.DeliveryOrderService;
 import com.swd392.group2.kgrill_service.service.ShipperService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -11,10 +12,7 @@ import jakarta.validation.constraints.NotNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
 
@@ -38,7 +36,7 @@ public class ShipperController {
     public ResponseEntity<Object> getAvailableShipperList(@Parameter(description = "Page number, starting from 1", required = true) @RequestParam(name = "pageNumber", defaultValue = "1") int pageNumber,
                                                           @Parameter(description = "Page size, 10 students max", required = true) @RequestParam(name = "pageSize", defaultValue = "10") int pageSize,
                                                           @Parameter(description = "Sort field default by Id", required = true) @RequestParam(name = "sortField", defaultValue = "id") String sortField,
-                                                          @Parameter(description = "Sort by ascending or descending") @RequestParam(name = "sortDir", defaultValue = "asc") String sortDir){
+                                                          @Parameter(description = "Sort by ascending or descending") @RequestParam(name = "sortDir", defaultValue = "asc") String sortDir) {
 
         return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Successfully get shipper list", shipperService.getAvailableShipperList(pageNumber, pageSize, sortField, sortDir));
     }
@@ -51,10 +49,10 @@ public class ShipperController {
             @ApiResponse(responseCode = "200", description = "Assign shipper to order successfully"),
             @ApiResponse(responseCode = "400", description = "Failed to assign shipper to order"),
     })
-    @GetMapping(value = "/assign-shipper")
+    @PostMapping(value = "/order")
     public ResponseEntity<Object> getCartDetail(@NotNull long shipperId, @NotNull long orderId) {
 
-        if (shipperService.assignShipperToOrder(shipperId, orderId)){
+        if (shipperService.assignShipperToOrder(shipperId, orderId)) {
             return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Successfully assign shipper to order", "");
         }
         return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Failed to assign shipper to order", "");
