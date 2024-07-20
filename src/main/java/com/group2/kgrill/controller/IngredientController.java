@@ -93,7 +93,7 @@ public class IngredientController {
             @ApiResponse(responseCode = "400", description = "Failed to get ingredient"),
     })
 
-    @GetMapping("/{id}")
+    @GetMapping("/{id}/ingredient-detail")
     public ResponseEntity<IngredientDTO> ingredient(@PathVariable("id") int id){
         return ResponseEntity.ok(ingredientService.getIngredientByID(id));
     }
@@ -145,7 +145,7 @@ public class IngredientController {
         ingredientService.updateIngredient(ingredientDTO, id);
         return new ResponseEntity<>("Update ingredient successfully",HttpStatus.OK);
     }
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{id}/ingredient-removal")
     public ResponseEntity<String> ingredientDelete(@PathVariable("id") int id){
         ingredientService.deleteIngredient(id);
         return new ResponseEntity<>("Delete successfully", HttpStatus.OK);
