@@ -104,19 +104,20 @@ public class DeliveryOrderController {
                                             "data": {
                                               "content": [
                                                 {
-                                                  "address": "asdasda",
-                                                  "latitude": 21.123214,
-                                                  "longitude": 101.123123,
-                                                  "phone": "0977833674",
-                                                  "User_name": "dinh tai",
-                                                  "Package_name": [
-                                                    "Combo nướng lẩu GoGi - Combo GoGi Smart",
-                                                    "Combo nướng lẩu GoGi - Combo Daehak"
-                                                  ],
-                                                  "Order_value": 1298000,
-                                                  "Order_date": "2024-07-16 17:23:26.0",
-                                                  "Order_status": "Ordering"
-                                                }
+                                                         "Delivery_Order_Id": 12,
+                                                         "User_name": "Dang Dinh Tai",
+                                                         "Phone": "0877666888",
+                                                         "Package_name": [
+                                                           "Combo Lẩu Nướng Hoàng Kim"
+                                                         ],
+                                                         "Order_value": 1700000,
+                                                         "Address": "Đ. Quảng Trường Sáng Tạo, , , , Việt Nam",
+                                                         "Latitude": 21.123456,
+                                                         "Longitude": 105.123456,
+                                                         "Order_date": "2024-07-20 02:24:43.484",
+                                                         "Order_status": "Preparing",
+                                                         "Shipper_name": "Shipper Tinh"
+                                                       }
                                               ],
                                               "page_no": 0,
                                               "page_size": 10,
