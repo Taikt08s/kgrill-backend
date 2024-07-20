@@ -61,7 +61,7 @@ public class DeliveryOrderController {
             @ApiResponse(responseCode = "200", description = "Cancel order successfully"),
             @ApiResponse(responseCode = "400", description = "Order is being delivered and cannot be cancelled"),
     })
-    @GetMapping("/cancel-order/{orderId}")
+    @GetMapping("/oder-cancellation/{orderId}")
     public ResponseEntity<Object> cancelOrderForManager(@PathVariable Long orderId){
         return deliveryOrderService.cancelOrderForManager(orderId);
     }
@@ -135,7 +135,7 @@ public class DeliveryOrderController {
                                     """))),
             @ApiResponse(responseCode = "401", description = "You have no permission to access this page"),
     })
-    @GetMapping(value = "/ordering")
+    @GetMapping(value = "/order-list")
     public ResponseEntity<Object> getOrderingQueue(
             @RequestParam(name = "pageNo", defaultValue = AppConstants.DEFAULT_PAGE_NUMBER, required = false) int pageNo,
             @RequestParam(name = "pageSize", defaultValue = AppConstants.DEFAULT_PAGE_SIZE, required = false) int pageSize,
