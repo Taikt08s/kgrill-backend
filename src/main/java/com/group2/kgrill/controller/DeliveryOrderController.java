@@ -4,6 +4,8 @@ import com.swd392.group2.kgrill_service.dto.DeliveryLocationDTO;
 import com.swd392.group2.kgrill_service.dto.mobiledto.DeliveryOrderDtoForCheckOut;
 import com.swd392.group2.kgrill_service.exception.CustomSuccessHandler;
 import com.swd392.group2.kgrill_service.service.DeliveryOrderService;
+import com.swd392.group2.kgrill_service.service.UserService;
+import com.swd392.group2.kgrill_service.service.impl.FirebaseMessagingService;
 import com.swd392.group2.kgrill_service.util.AppConstants;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -27,6 +29,10 @@ import java.util.UUID;
 public class DeliveryOrderController {
 
     private final DeliveryOrderService deliveryOrderService;
+
+    private final UserService userService;
+
+    private final FirebaseMessagingService firebaseMessagingService;
 
     @Operation(
             summary = "Update delivery order location",
@@ -192,6 +198,11 @@ public class DeliveryOrderController {
     public ResponseEntity<Object> checkOutOrder(@RequestBody @Valid DeliveryOrderDtoForCheckOut deliveryOrderDtoForCheckOut) {
 
         if (deliveryOrderService.checkOutOrder(deliveryOrderDtoForCheckOut)){
+            UUID userId = deliveryOrderDtoForCheckOut.getUserId();
+            String deviceToken = userService.getDeviceTokenByUserId(userId);
+            if (deviceToken != null) {
+                firebaseMessagingService.sendNotification(deviceToken, "Order Status", "Your order is now being processed");
+            }
             return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Successfully check out order", "");
         }
         return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Failed to check out order", "");
