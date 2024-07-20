@@ -56,7 +56,7 @@ public class DishController {
                                     """))),
             @ApiResponse(responseCode = "400", description = "Failed to get dish's list"),
     })
-    @PostMapping(value = "/dish/search")
+    @PostMapping(value = "/dish/dish-list")
     public ResponseEntity<Object> getAllDishByManager(@Parameter(description = "Page number, starting from 1", required = true) @RequestParam(name = "pageNumber", defaultValue = "1") int pageNumber,
                                                       @Parameter(description = "Page size, 10 dishes max", required = true) @RequestParam(name = "pageSize", defaultValue = "10") int pageSize,
                                                       @Parameter(description = "Sort field default by Id", required = true) @RequestParam(name = "sortField", defaultValue = "id") String sortField,
@@ -91,7 +91,7 @@ public class DishController {
                                     """))),
             @ApiResponse(responseCode = "400", description = "Failed to get dish"),
     })
-    @GetMapping("dish/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<DishRequest> dish(@PathVariable int id){
         return ResponseEntity.ok(dishService.getDishByID(id));
     }
@@ -125,7 +125,7 @@ public class DishController {
                                     """))),
             @ApiResponse(responseCode = "400", description = "Failed to get dish"),
     })
-    @GetMapping("/dish/search-by-filter")
+    @GetMapping("/dish/dish-details-by-filter")
     public ResponseEntity<Object> searchDishByFilter(@Parameter(description = "Page number, starting from 1", required = true) @RequestParam(name = "pageNumber", defaultValue = "1") int pageNumber,
                                                      @Parameter(description = "Page size, 10 dishes max", required = true) @RequestParam(name = "pageSize", defaultValue = "10") int pageSize,
                                                      @Parameter(description = "Sort field default by Id", required = true) @RequestParam(name = "sortField", defaultValue = "id") String sortField,
@@ -176,7 +176,7 @@ public class DishController {
 
             @ApiResponse(responseCode = "400", description = "Failed to create new dish"),
     })
-    @PostMapping("dish/create")
+    @PostMapping("dish/new-dish")
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<Object> dishCreate(@RequestBody DishRequest dishDTO){
         dishService.createDish(dishDTO);
@@ -223,14 +223,14 @@ public class DishController {
             @ApiResponse(responseCode = "400", description = "Failed to update dish"),
     })
 
-    @PutMapping("dish/update")
+    @PutMapping("/")
     public ResponseEntity<Object> dishUpdate(@RequestBody DishRequest dishDTO){
 
         dishService.updateDish(dishDTO);
         return CustomSuccessHandler.responseBuilder(HttpStatus.OK, "Updated dish successfully", "");
     }
 
-    @DeleteMapping("dish/{id}/delete")
+    @DeleteMapping("/{id}")
     public ResponseEntity<String> dishDelete(@PathVariable("id") int id){
         dishService.deleteDish(id);
         return new ResponseEntity<>("Delete successfully", HttpStatus.OK);

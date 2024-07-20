@@ -53,7 +53,7 @@ public class IngredientController {
                                     """))),
             @ApiResponse(responseCode = "400", description = "Failed to get ingredient's list"),
     })
-    @PostMapping(value = "/ingredient/search")
+    @PostMapping(value = "/ingredient/ingredient-list")
     public ResponseEntity<Object> getAllIngredientByManager(@Parameter(description = "Page number, starting from 1", required = true) @RequestParam(name = "pageNumber", defaultValue = "1") int pageNumber,
                                                             @Parameter(description = "Page size, 10 dishes max", required = true) @RequestParam(name = "pageSize", defaultValue = "10") int pageSize,
                                                             @Parameter(description = "Sort field default by Id", required = true) @RequestParam(name = "sortField", defaultValue = "id") String sortField,
@@ -93,7 +93,7 @@ public class IngredientController {
             @ApiResponse(responseCode = "400", description = "Failed to get ingredient"),
     })
 
-    @GetMapping("ingredient/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<IngredientDTO> ingredient(@PathVariable("id") int id){
         return ResponseEntity.ok(ingredientService.getIngredientByID(id));
     }
@@ -126,7 +126,7 @@ public class IngredientController {
                                     """))),
             @ApiResponse(responseCode = "400", description = "Failed to create new ingredient"),
     })
-    @PostMapping("ingredient/create")
+    @PostMapping("ingredient/new-ingredient")
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<Object> ingredientCreate(@RequestBody IngredientDTO ingredientDTO){
         ingredientService.createIngredient(ingredientDTO);
@@ -140,12 +140,12 @@ public class IngredientController {
             @ApiResponse(responseCode = "200", description = "Update ingredient successfully"),
             @ApiResponse(responseCode = "400", description = "Failed to update ingredient"),
     })
-    @PutMapping("ingredient/{id}/update")
+    @PutMapping("/{id}")
     public ResponseEntity<Object> ingredientUpdate(@RequestBody IngredientDTO ingredientDTO, @PathVariable("id") int id){
         ingredientService.updateIngredient(ingredientDTO, id);
         return new ResponseEntity<>("Update ingredient successfully",HttpStatus.OK);
     }
-    @DeleteMapping("ingredient/{id}/delete")
+    @DeleteMapping("/{id}")
     public ResponseEntity<String> ingredientDelete(@PathVariable("id") int id){
         ingredientService.deleteIngredient(id);
         return new ResponseEntity<>("Delete successfully", HttpStatus.OK);
