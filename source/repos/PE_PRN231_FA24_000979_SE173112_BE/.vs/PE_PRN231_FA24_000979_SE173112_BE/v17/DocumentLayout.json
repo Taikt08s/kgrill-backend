@@ -1,0 +1,237 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\TINH KHUNG\\source\\repos\\PE_PRN231_FA24_000979_SE173112_BE\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{250FB249-0AFE-42DE-9EFC-EF93361F1AC4}|PE_PRN231_FA24_000979_VoVanTinh_FE\\PE_PRN231_FA24_000979_VoVanTinh_FE.csproj|c:\\users\\tinh khung\\source\\repos\\pe_prn231_fa24_000979_se173112_be\\pe_prn231_fa24_000979_vovantinh_fe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{250FB249-0AFE-42DE-9EFC-EF93361F1AC4}|PE_PRN231_FA24_000979_VoVanTinh_FE\\PE_PRN231_FA24_000979_VoVanTinh_FE.csproj|solutionrelative:pe_prn231_fa24_000979_vovantinh_fe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{250FB249-0AFE-42DE-9EFC-EF93361F1AC4}|PE_PRN231_FA24_000979_VoVanTinh_FE\\PE_PRN231_FA24_000979_VoVanTinh_FE.csproj|c:\\users\\tinh khung\\source\\repos\\pe_prn231_fa24_000979_se173112_be\\pe_prn231_fa24_000979_vovantinh_fe\\pages\\login\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{250FB249-0AFE-42DE-9EFC-EF93361F1AC4}|PE_PRN231_FA24_000979_VoVanTinh_FE\\PE_PRN231_FA24_000979_VoVanTinh_FE.csproj|solutionrelative:pe_prn231_fa24_000979_vovantinh_fe\\pages\\login\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{250FB249-0AFE-42DE-9EFC-EF93361F1AC4}|PE_PRN231_FA24_000979_VoVanTinh_FE\\PE_PRN231_FA24_000979_VoVanTinh_FE.csproj|c:\\users\\tinh khung\\source\\repos\\pe_prn231_fa24_000979_se173112_be\\pe_prn231_fa24_000979_vovantinh_fe\\pages\\cosmeticpage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{250FB249-0AFE-42DE-9EFC-EF93361F1AC4}|PE_PRN231_FA24_000979_VoVanTinh_FE\\PE_PRN231_FA24_000979_VoVanTinh_FE.csproj|solutionrelative:pe_prn231_fa24_000979_vovantinh_fe\\pages\\cosmeticpage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{250FB249-0AFE-42DE-9EFC-EF93361F1AC4}|PE_PRN231_FA24_000979_VoVanTinh_FE\\PE_PRN231_FA24_000979_VoVanTinh_FE.csproj|c:\\users\\tinh khung\\source\\repos\\pe_prn231_fa24_000979_se173112_be\\pe_prn231_fa24_000979_vovantinh_fe\\pages\\cosmeticpage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{250FB249-0AFE-42DE-9EFC-EF93361F1AC4}|PE_PRN231_FA24_000979_VoVanTinh_FE\\PE_PRN231_FA24_000979_VoVanTinh_FE.csproj|solutionrelative:pe_prn231_fa24_000979_vovantinh_fe\\pages\\cosmeticpage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0192EF67-5745-424F-9704-03E2A0B47173}|PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_SE173112_BE.csproj|c:\\users\\tinh khung\\source\\repos\\pe_prn231_fa24_000979_se173112_be\\pe_prn231_fa24_000979_se173112_be\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0192EF67-5745-424F-9704-03E2A0B47173}|PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_SE173112_BE.csproj|solutionrelative:pe_prn231_fa24_000979_se173112_be\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0192EF67-5745-424F-9704-03E2A0B47173}|PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_SE173112_BE.csproj|c:\\users\\tinh khung\\source\\repos\\pe_prn231_fa24_000979_se173112_be\\pe_prn231_fa24_000979_se173112_be\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0192EF67-5745-424F-9704-03E2A0B47173}|PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_SE173112_BE.csproj|solutionrelative:pe_prn231_fa24_000979_se173112_be\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0192EF67-5745-424F-9704-03E2A0B47173}|PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_SE173112_BE.csproj|c:\\users\\tinh khung\\source\\repos\\pe_prn231_fa24_000979_se173112_be\\pe_prn231_fa24_000979_se173112_be\\controllers\\cosmeticinformationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0192EF67-5745-424F-9704-03E2A0B47173}|PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_SE173112_BE.csproj|solutionrelative:pe_prn231_fa24_000979_se173112_be\\controllers\\cosmeticinformationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0192EF67-5745-424F-9704-03E2A0B47173}|PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_SE173112_BE.csproj|c:\\users\\tinh khung\\source\\repos\\pe_prn231_fa24_000979_se173112_be\\pe_prn231_fa24_000979_se173112_be\\controllers\\jwtcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0192EF67-5745-424F-9704-03E2A0B47173}|PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_SE173112_BE.csproj|solutionrelative:pe_prn231_fa24_000979_se173112_be\\controllers\\jwtcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FF4F09E-3FF4-445C-9520-65321F17BBDB}|Repository\\Repository.csproj|c:\\users\\tinh khung\\source\\repos\\pe_prn231_fa24_000979_se173112_be\\repository\\cosmeticinformationrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FF4F09E-3FF4-445C-9520-65321F17BBDB}|Repository\\Repository.csproj|solutionrelative:repository\\cosmeticinformationrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FF4F09E-3FF4-445C-9520-65321F17BBDB}|Repository\\Repository.csproj|c:\\users\\tinh khung\\source\\repos\\pe_prn231_fa24_000979_se173112_be\\repository\\systemaccountrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FF4F09E-3FF4-445C-9520-65321F17BBDB}|Repository\\Repository.csproj|solutionrelative:repository\\systemaccountrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FF4F09E-3FF4-445C-9520-65321F17BBDB}|Repository\\Repository.csproj|c:\\users\\tinh khung\\source\\repos\\pe_prn231_fa24_000979_se173112_be\\repository\\isystemaccountrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FF4F09E-3FF4-445C-9520-65321F17BBDB}|Repository\\Repository.csproj|solutionrelative:repository\\isystemaccountrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{250FB249-0AFE-42DE-9EFC-EF93361F1AC4}|PE_PRN231_FA24_000979_VoVanTinh_FE\\PE_PRN231_FA24_000979_VoVanTinh_FE.csproj|c:\\users\\tinh khung\\source\\repos\\pe_prn231_fa24_000979_se173112_be\\pe_prn231_fa24_000979_vovantinh_fe\\pages\\login\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{250FB249-0AFE-42DE-9EFC-EF93361F1AC4}|PE_PRN231_FA24_000979_VoVanTinh_FE\\PE_PRN231_FA24_000979_VoVanTinh_FE.csproj|solutionrelative:pe_prn231_fa24_000979_vovantinh_fe\\pages\\login\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0192EF67-5745-424F-9704-03E2A0B47173}|PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_SE173112_BE.csproj|c:\\users\\tinh khung\\source\\repos\\pe_prn231_fa24_000979_se173112_be\\pe_prn231_fa24_000979_se173112_be\\pe_prn231_fa24_000979_se173112_be.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0192EF67-5745-424F-9704-03E2A0B47173}|PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_SE173112_BE.csproj|solutionrelative:pe_prn231_fa24_000979_se173112_be\\pe_prn231_fa24_000979_se173112_be.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_VoVanTinh_FE\\Program.cs",
+              "RelativeDocumentMoniker": "PE_PRN231_FA24_000979_VoVanTinh_FE\\Program.cs",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_VoVanTinh_FE\\Program.cs",
+              "RelativeToolTip": "PE_PRN231_FA24_000979_VoVanTinh_FE\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T02:28:29.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_SE173112_BE\\Program.cs",
+              "RelativeDocumentMoniker": "PE_PRN231_FA24_000979_SE173112_BE\\Program.cs",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_SE173112_BE\\Program.cs",
+              "RelativeToolTip": "PE_PRN231_FA24_000979_SE173112_BE\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T02:06:40.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CosmeticInformationController.cs",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_SE173112_BE\\Controllers\\CosmeticInformationController.cs",
+              "RelativeDocumentMoniker": "PE_PRN231_FA24_000979_SE173112_BE\\Controllers\\CosmeticInformationController.cs",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_SE173112_BE\\Controllers\\CosmeticInformationController.cs",
+              "RelativeToolTip": "PE_PRN231_FA24_000979_SE173112_BE\\Controllers\\CosmeticInformationController.cs",
+              "ViewState": "AQIAAFIAAAAAAAAAAAAwwAsAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T02:06:32.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "JwtController.cs",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_SE173112_BE\\Controllers\\JwtController.cs",
+              "RelativeDocumentMoniker": "PE_PRN231_FA24_000979_SE173112_BE\\Controllers\\JwtController.cs",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_SE173112_BE\\Controllers\\JwtController.cs",
+              "RelativeToolTip": "PE_PRN231_FA24_000979_SE173112_BE\\Controllers\\JwtController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T02:06:31.513Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_SE173112_BE\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "PE_PRN231_FA24_000979_SE173112_BE\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_SE173112_BE\\WeatherForecast.cs",
+              "RelativeToolTip": "PE_PRN231_FA24_000979_SE173112_BE\\WeatherForecast.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T02:06:29.469Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CosmeticInformationRepo.cs",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PE_PRN231_FA24_000979_SE173112_BE\\Repository\\CosmeticInformationRepo.cs",
+              "RelativeDocumentMoniker": "Repository\\CosmeticInformationRepo.cs",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PE_PRN231_FA24_000979_SE173112_BE\\Repository\\CosmeticInformationRepo.cs",
+              "RelativeToolTip": "Repository\\CosmeticInformationRepo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T02:06:20.978Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SystemAccountRepo.cs",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PE_PRN231_FA24_000979_SE173112_BE\\Repository\\SystemAccountRepo.cs",
+              "RelativeDocumentMoniker": "Repository\\SystemAccountRepo.cs",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PE_PRN231_FA24_000979_SE173112_BE\\Repository\\SystemAccountRepo.cs",
+              "RelativeToolTip": "Repository\\SystemAccountRepo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T02:06:20.113Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ISystemAccountRepo.cs",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PE_PRN231_FA24_000979_SE173112_BE\\Repository\\ISystemAccountRepo.cs",
+              "RelativeDocumentMoniker": "Repository\\ISystemAccountRepo.cs",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PE_PRN231_FA24_000979_SE173112_BE\\Repository\\ISystemAccountRepo.cs",
+              "RelativeToolTip": "Repository\\ISystemAccountRepo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T02:06:19.491Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_VoVanTinh_FE\\Pages\\CosmeticPage\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "PE_PRN231_FA24_000979_VoVanTinh_FE\\Pages\\CosmeticPage\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_VoVanTinh_FE\\Pages\\CosmeticPage\\Index.cshtml.cs",
+              "RelativeToolTip": "PE_PRN231_FA24_000979_VoVanTinh_FE\\Pages\\CosmeticPage\\Index.cshtml.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAgwDkAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T01:59:58.561Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_VoVanTinh_FE\\Pages\\CosmeticPage\\Index.cshtml",
+              "RelativeDocumentMoniker": "PE_PRN231_FA24_000979_VoVanTinh_FE\\Pages\\CosmeticPage\\Index.cshtml",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_VoVanTinh_FE\\Pages\\CosmeticPage\\Index.cshtml",
+              "RelativeToolTip": "PE_PRN231_FA24_000979_VoVanTinh_FE\\Pages\\CosmeticPage\\Index.cshtml",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAADMAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-10T01:59:58.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_VoVanTinh_FE\\Pages\\Login\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "PE_PRN231_FA24_000979_VoVanTinh_FE\\Pages\\Login\\Login.cshtml.cs",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_VoVanTinh_FE\\Pages\\Login\\Login.cshtml.cs",
+              "RelativeToolTip": "PE_PRN231_FA24_000979_VoVanTinh_FE\\Pages\\Login\\Login.cshtml.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAmwCsAAABeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T01:54:43.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_VoVanTinh_FE\\Pages\\Login\\Login.cshtml",
+              "RelativeDocumentMoniker": "PE_PRN231_FA24_000979_VoVanTinh_FE\\Pages\\Login\\Login.cshtml",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_VoVanTinh_FE\\Pages\\Login\\Login.cshtml",
+              "RelativeToolTip": "PE_PRN231_FA24_000979_VoVanTinh_FE\\Pages\\Login\\Login.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAB0AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-10T01:54:42.992Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PE_PRN231_FA24_000979_SE173112_BE.csproj",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_SE173112_BE.csproj",
+              "RelativeDocumentMoniker": "PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_SE173112_BE.csproj",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_SE173112_BE.csproj",
+              "RelativeToolTip": "PE_PRN231_FA24_000979_SE173112_BE\\PE_PRN231_FA24_000979_SE173112_BE.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-10T01:50:03.524Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

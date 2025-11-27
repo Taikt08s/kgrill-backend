@@ -1,0 +1,30 @@
+C:\Users\TINH KHUNG\source\repos\PRN221_PE_SU24_082408_VoVanTinhSE173112\Repositories\bin\Debug\net7.0\Repositories.deps.json
+C:\Users\TINH KHUNG\source\repos\PRN221_PE_SU24_082408_VoVanTinhSE173112\Repositories\bin\Debug\net7.0\Repositories.runtimeconfig.json
+C:\Users\TINH KHUNG\source\repos\PRN221_PE_SU24_082408_VoVanTinhSE173112\Repositories\bin\Debug\net7.0\Repositories.dll
+C:\Users\TINH KHUNG\source\repos\PRN221_PE_SU24_082408_VoVanTinhSE173112\Repositories\bin\Debug\net7.0\Repositories.pdb
+C:\Users\TINH KHUNG\source\repos\PRN221_PE_SU24_082408_VoVanTinhSE173112\Repositories\obj\Debug\net7.0\Repositories.csproj.AssemblyReference.cache
+C:\Users\TINH KHUNG\source\repos\PRN221_PE_SU24_082408_VoVanTinhSE173112\Repositories\obj\Debug\net7.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\TINH KHUNG\source\repos\PRN221_PE_SU24_082408_VoVanTinhSE173112\Repositories\obj\Debug\net7.0\Repositories.AssemblyInfoInputs.cache
+C:\Users\TINH KHUNG\source\repos\PRN221_PE_SU24_082408_VoVanTinhSE173112\Repositories\obj\Debug\net7.0\Repositories.AssemblyInfo.cs
+C:\Users\TINH KHUNG\source\repos\PRN221_PE_SU24_082408_VoVanTinhSE173112\Repositories\obj\Debug\net7.0\Repositories.csproj.CoreCompileInputs.cache
+C:\Users\TINH KHUNG\source\repos\PRN221_PE_SU24_082408_VoVanTinhSE173112\Repositories\obj\Debug\net7.0\Repositories.sourcelink.json
+C:\Users\TINH KHUNG\source\repos\PRN221_PE_SU24_082408_VoVanTinhSE173112\Repositories\obj\Debug\net7.0\Repositories.dll
+C:\Users\TINH KHUNG\source\repos\PRN221_PE_SU24_082408_VoVanTinhSE173112\Repositories\obj\Debug\net7.0\refint\Repositories.dll
+C:\Users\TINH KHUNG\source\repos\PRN221_PE_SU24_082408_VoVanTinhSE173112\Repositories\obj\Debug\net7.0\Repositories.pdb
+C:\Users\TINH KHUNG\source\repos\PRN221_PE_SU24_082408_VoVanTinhSE173112\Repositories\obj\Debug\net7.0\Repositories.genruntimeconfig.cache
+C:\Users\TINH KHUNG\source\repos\PRN221_PE_SU24_082408_VoVanTinhSE173112\Repositories\obj\Debug\net7.0\ref\Repositories.dll
+C:\Users\TINH KHUNG\source\repos\PRN221_PE_SU24_082408_VoVanTinhSE173112\Repositories (2)\bin\Debug\net7.0\Repositories.deps.json
+C:\Users\TINH KHUNG\source\repos\PRN221_PE_SU24_082408_VoVanTinhSE173112\Repositories (2)\bin\Debug\net7.0\Repositories.runtimeconfig.json
+C:\Users\TINH KHUNG\source\repos\PRN221_PE_SU24_082408_VoVanTinhSE173112\Repositories (2)\bin\Debug\net7.0\Repositories.dll
+C:\Users\TINH KHUNG\source\repos\PRN221_PE_SU24_082408_VoVanTinhSE173112\Repositories (2)\bin\Debug\net7.0\Repositories.pdb
+C:\Users\TINH KHUNG\source\repos\PRN221_PE_SU24_082408_VoVanTinhSE173112\Repositories (2)\obj\Debug\net7.0\Repositories.csproj.AssemblyReference.cache
+C:\Users\TINH KHUNG\source\repos\PRN221_PE_SU24_082408_VoVanTinhSE173112\Repositories (2)\obj\Debug\net7.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\TINH KHUNG\source\repos\PRN221_PE_SU24_082408_VoVanTinhSE173112\Repositories (2)\obj\Debug\net7.0\Repositories.AssemblyInfoInputs.cache
+C:\Users\TINH KHUNG\source\repos\PRN221_PE_SU24_082408_VoVanTinhSE173112\Repositories (2)\obj\Debug\net7.0\Repositories.AssemblyInfo.cs
+C:\Users\TINH KHUNG\source\repos\PRN221_PE_SU24_082408_VoVanTinhSE173112\Repositories (2)\obj\Debug\net7.0\Repositories.csproj.CoreCompileInputs.cache
+C:\Users\TINH KHUNG\source\repos\PRN221_PE_SU24_082408_VoVanTinhSE173112\Repositories (2)\obj\Debug\net7.0\Repositories.sourcelink.json
+C:\Users\TINH KHUNG\source\repos\PRN221_PE_SU24_082408_VoVanTinhSE173112\Repositories (2)\obj\Debug\net7.0\Repositories.dll
+C:\Users\TINH KHUNG\source\repos\PRN221_PE_SU24_082408_VoVanTinhSE173112\Repositories (2)\obj\Debug\net7.0\refint\Repositories.dll
+C:\Users\TINH KHUNG\source\repos\PRN221_PE_SU24_082408_VoVanTinhSE173112\Repositories (2)\obj\Debug\net7.0\Repositories.pdb
+C:\Users\TINH KHUNG\source\repos\PRN221_PE_SU24_082408_VoVanTinhSE173112\Repositories (2)\obj\Debug\net7.0\Repositories.genruntimeconfig.cache
+C:\Users\TINH KHUNG\source\repos\PRN221_PE_SU24_082408_VoVanTinhSE173112\Repositories (2)\obj\Debug\net7.0\ref\Repositories.dll

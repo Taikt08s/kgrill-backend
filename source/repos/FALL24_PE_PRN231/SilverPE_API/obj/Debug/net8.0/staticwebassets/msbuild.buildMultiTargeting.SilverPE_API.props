@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\SilverPE_API.props" />
+</Project>

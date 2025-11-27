@@ -1,0 +1,16 @@
+C:\Users\TINH KHUNG\source\repos\FALL24_PE_PRN231\SilverPE_DAO\bin\Debug\net8.0\SilverPE_DAO.deps.json
+C:\Users\TINH KHUNG\source\repos\FALL24_PE_PRN231\SilverPE_DAO\bin\Debug\net8.0\SilverPE_DAO.dll
+C:\Users\TINH KHUNG\source\repos\FALL24_PE_PRN231\SilverPE_DAO\bin\Debug\net8.0\SilverPE_DAO.pdb
+C:\Users\TINH KHUNG\source\repos\FALL24_PE_PRN231\SilverPE_DAO\bin\Debug\net8.0\SilverPE_BusinessObject.dll
+C:\Users\TINH KHUNG\source\repos\FALL24_PE_PRN231\SilverPE_DAO\bin\Debug\net8.0\SilverPE_BusinessObject.pdb
+C:\Users\TINH KHUNG\source\repos\FALL24_PE_PRN231\SilverPE_DAO\obj\Debug\net8.0\SilverPE_DAO.csproj.AssemblyReference.cache
+C:\Users\TINH KHUNG\source\repos\FALL24_PE_PRN231\SilverPE_DAO\obj\Debug\net8.0\SilverPE_DAO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\TINH KHUNG\source\repos\FALL24_PE_PRN231\SilverPE_DAO\obj\Debug\net8.0\SilverPE_DAO.AssemblyInfoInputs.cache
+C:\Users\TINH KHUNG\source\repos\FALL24_PE_PRN231\SilverPE_DAO\obj\Debug\net8.0\SilverPE_DAO.AssemblyInfo.cs
+C:\Users\TINH KHUNG\source\repos\FALL24_PE_PRN231\SilverPE_DAO\obj\Debug\net8.0\SilverPE_DAO.csproj.CoreCompileInputs.cache
+C:\Users\TINH KHUNG\source\repos\FALL24_PE_PRN231\SilverPE_DAO\obj\Debug\net8.0\SilverPE_DAO.sourcelink.json
+C:\Users\TINH KHUNG\source\repos\FALL24_PE_PRN231\SilverPE_DAO\obj\Debug\net8.0\SilverPE.A6B9C8BD.Up2Date
+C:\Users\TINH KHUNG\source\repos\FALL24_PE_PRN231\SilverPE_DAO\obj\Debug\net8.0\SilverPE_DAO.dll
+C:\Users\TINH KHUNG\source\repos\FALL24_PE_PRN231\SilverPE_DAO\obj\Debug\net8.0\refint\SilverPE_DAO.dll
+C:\Users\TINH KHUNG\source\repos\FALL24_PE_PRN231\SilverPE_DAO\obj\Debug\net8.0\SilverPE_DAO.pdb
+C:\Users\TINH KHUNG\source\repos\FALL24_PE_PRN231\SilverPE_DAO\obj\Debug\net8.0\ref\SilverPE_DAO.dll

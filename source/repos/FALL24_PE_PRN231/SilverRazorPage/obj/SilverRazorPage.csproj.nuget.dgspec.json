@@ -1,0 +1,381 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\TINH KHUNG\\source\\repos\\FALL24_PE_PRN231\\SilverRazorPage\\SilverRazorPage.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\TINH KHUNG\\source\\repos\\FALL24_PE_PRN231\\SilverPE_API\\SilverPE_API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\TINH KHUNG\\source\\repos\\FALL24_PE_PRN231\\SilverPE_API\\SilverPE_API.csproj",
+        "projectName": "SilverPE_API",
+        "projectPath": "C:\\Users\\TINH KHUNG\\source\\repos\\FALL24_PE_PRN231\\SilverPE_API\\SilverPE_API.csproj",
+        "packagesPath": "C:\\Users\\TINH KHUNG\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\TINH KHUNG\\source\\repos\\FALL24_PE_PRN231\\SilverPE_API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\TINH KHUNG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\TINH KHUNG\\source\\repos\\FALL24_PE_PRN231\\SilverPE_Repository\\SilverPE_Repository.csproj": {
+                "projectPath": "C:\\Users\\TINH KHUNG\\source\\repos\\FALL24_PE_PRN231\\SilverPE_Repository\\SilverPE_Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\TINH KHUNG\\source\\repos\\FALL24_PE_PRN231\\SilverPE_BusinessObject\\SilverPE_BusinessObject.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\TINH KHUNG\\source\\repos\\FALL24_PE_PRN231\\SilverPE_BusinessObject\\SilverPE_BusinessObject.csproj",
+        "projectName": "SilverPE_BusinessObject",
+        "projectPath": "C:\\Users\\TINH KHUNG\\source\\repos\\FALL24_PE_PRN231\\SilverPE_BusinessObject\\SilverPE_BusinessObject.csproj",
+        "packagesPath": "C:\\Users\\TINH KHUNG\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\TINH KHUNG\\source\\repos\\FALL24_PE_PRN231\\SilverPE_BusinessObject\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\TINH KHUNG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.AspNetCore.OData": {
+              "target": "Package",
+              "version": "[8.2.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\TINH KHUNG\\source\\repos\\FALL24_PE_PRN231\\SilverPE_DAO\\SilverPE_DAO.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\TINH KHUNG\\source\\repos\\FALL24_PE_PRN231\\SilverPE_DAO\\SilverPE_DAO.csproj",
+        "projectName": "SilverPE_DAO",
+        "projectPath": "C:\\Users\\TINH KHUNG\\source\\repos\\FALL24_PE_PRN231\\SilverPE_DAO\\SilverPE_DAO.csproj",
+        "packagesPath": "C:\\Users\\TINH KHUNG\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\TINH KHUNG\\source\\repos\\FALL24_PE_PRN231\\SilverPE_DAO\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\TINH KHUNG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\TINH KHUNG\\source\\repos\\FALL24_PE_PRN231\\SilverPE_BusinessObject\\SilverPE_BusinessObject.csproj": {
+                "projectPath": "C:\\Users\\TINH KHUNG\\source\\repos\\FALL24_PE_PRN231\\SilverPE_BusinessObject\\SilverPE_BusinessObject.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\TINH KHUNG\\source\\repos\\FALL24_PE_PRN231\\SilverPE_Repository\\SilverPE_Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\TINH KHUNG\\source\\repos\\FALL24_PE_PRN231\\SilverPE_Repository\\SilverPE_Repository.csproj",
+        "projectName": "SilverPE_Repository",
+        "projectPath": "C:\\Users\\TINH KHUNG\\source\\repos\\FALL24_PE_PRN231\\SilverPE_Repository\\SilverPE_Repository.csproj",
+        "packagesPath": "C:\\Users\\TINH KHUNG\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\TINH KHUNG\\source\\repos\\FALL24_PE_PRN231\\SilverPE_Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\TINH KHUNG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\TINH KHUNG\\source\\repos\\FALL24_PE_PRN231\\SilverPE_DAO\\SilverPE_DAO.csproj": {
+                "projectPath": "C:\\Users\\TINH KHUNG\\source\\repos\\FALL24_PE_PRN231\\SilverPE_DAO\\SilverPE_DAO.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\TINH KHUNG\\source\\repos\\FALL24_PE_PRN231\\SilverRazorPage\\SilverRazorPage.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\TINH KHUNG\\source\\repos\\FALL24_PE_PRN231\\SilverRazorPage\\SilverRazorPage.csproj",
+        "projectName": "SilverRazorPage",
+        "projectPath": "C:\\Users\\TINH KHUNG\\source\\repos\\FALL24_PE_PRN231\\SilverRazorPage\\SilverRazorPage.csproj",
+        "packagesPath": "C:\\Users\\TINH KHUNG\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\TINH KHUNG\\source\\repos\\FALL24_PE_PRN231\\SilverRazorPage\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\TINH KHUNG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\TINH KHUNG\\source\\repos\\FALL24_PE_PRN231\\SilverPE_API\\SilverPE_API.csproj": {
+                "projectPath": "C:\\Users\\TINH KHUNG\\source\\repos\\FALL24_PE_PRN231\\SilverPE_API\\SilverPE_API.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

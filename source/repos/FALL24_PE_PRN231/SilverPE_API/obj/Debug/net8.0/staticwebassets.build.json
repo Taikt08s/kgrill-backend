@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "0vRlyVCLwxbbA0hzS+toJI5RftUu1Fjgfln4ZsxNeGk=",
+  "Source": "SilverPE_API",
+  "BasePath": "_content/SilverPE_API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

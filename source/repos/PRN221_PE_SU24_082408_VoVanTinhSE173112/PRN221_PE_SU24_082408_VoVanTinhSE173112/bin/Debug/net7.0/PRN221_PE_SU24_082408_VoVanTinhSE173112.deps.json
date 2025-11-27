@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "PRN221_PE_SU24_082408_VoVanTinhSE173112/1.0.0": {
+        "runtime": {
+          "PRN221_PE_SU24_082408_VoVanTinhSE173112.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PRN221_PE_SU24_082408_VoVanTinhSE173112/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

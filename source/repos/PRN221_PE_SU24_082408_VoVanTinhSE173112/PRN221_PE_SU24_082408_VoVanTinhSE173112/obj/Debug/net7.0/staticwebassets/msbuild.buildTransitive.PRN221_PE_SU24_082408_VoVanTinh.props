@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\PRN221_PE_SU24_082408_VoVanTinh.props" />
+</Project>

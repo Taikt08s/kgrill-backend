@@ -1,0 +1,402 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|c:\\users\\tinh khung\\source\\repos\\prn221_pe_su24_082408_vovantinhse173112\\prn221_pe_su24_082408_vovantinhse173112\\pages\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|solutionrelative:prn221_pe_su24_082408_vovantinhse173112\\pages\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|c:\\users\\tinh khung\\source\\repos\\prn221_pe_su24_082408_vovantinhse173112\\prn221_pe_su24_082408_vovantinhse173112\\pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|solutionrelative:prn221_pe_su24_082408_vovantinhse173112\\pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|c:\\users\\tinh khung\\source\\repos\\prn221_pe_su24_082408_vovantinhse173112\\prn221_pe_su24_082408_vovantinhse173112\\pages\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|solutionrelative:prn221_pe_su24_082408_vovantinhse173112\\pages\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|c:\\users\\tinh khung\\source\\repos\\prn221_pe_su24_082408_vovantinhse173112\\prn221_pe_su24_082408_vovantinhse173112\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|solutionrelative:prn221_pe_su24_082408_vovantinhse173112\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|c:\\users\\tinh khung\\source\\repos\\prn221_pe_su24_082408_vovantinhse173112\\prn221_pe_su24_082408_vovantinhse173112\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|solutionrelative:prn221_pe_su24_082408_vovantinhse173112\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|c:\\users\\tinh khung\\source\\repos\\prn221_pe_su24_082408_vovantinhse173112\\prn221_pe_su24_082408_vovantinhse173112\\prn221_pe_su24_082408_vovantinh.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|solutionrelative:prn221_pe_su24_082408_vovantinhse173112\\prn221_pe_su24_082408_vovantinh.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|c:\\users\\tinh khung\\source\\repos\\prn221_pe_su24_082408_vovantinhse173112\\prn221_pe_su24_082408_vovantinhse173112\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|solutionrelative:prn221_pe_su24_082408_vovantinhse173112\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|c:\\users\\tinh khung\\source\\repos\\prn221_pe_su24_082408_vovantinhse173112\\prn221_pe_su24_082408_vovantinhse173112\\pages\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|solutionrelative:prn221_pe_su24_082408_vovantinhse173112\\pages\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|c:\\users\\tinh khung\\source\\repos\\prn221_pe_su24_082408_vovantinhse173112\\prn221_pe_su24_082408_vovantinhse173112\\pages\\admin\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|solutionrelative:prn221_pe_su24_082408_vovantinhse173112\\pages\\admin\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|c:\\users\\tinh khung\\source\\repos\\prn221_pe_su24_082408_vovantinhse173112\\prn221_pe_su24_082408_vovantinhse173112\\pages\\admin\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|solutionrelative:prn221_pe_su24_082408_vovantinhse173112\\pages\\admin\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|c:\\users\\tinh khung\\source\\repos\\prn221_pe_su24_082408_vovantinhse173112\\prn221_pe_su24_082408_vovantinhse173112\\pages\\admin\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|solutionrelative:prn221_pe_su24_082408_vovantinhse173112\\pages\\admin\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|c:\\users\\tinh khung\\source\\repos\\prn221_pe_su24_082408_vovantinhse173112\\prn221_pe_su24_082408_vovantinhse173112\\pages\\admin\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|solutionrelative:prn221_pe_su24_082408_vovantinhse173112\\pages\\admin\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|c:\\users\\tinh khung\\source\\repos\\prn221_pe_su24_082408_vovantinhse173112\\prn221_pe_su24_082408_vovantinhse173112\\pages\\admin\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|solutionrelative:prn221_pe_su24_082408_vovantinhse173112\\pages\\admin\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|c:\\users\\tinh khung\\source\\repos\\prn221_pe_su24_082408_vovantinhse173112\\prn221_pe_su24_082408_vovantinhse173112\\pages\\admin\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|solutionrelative:prn221_pe_su24_082408_vovantinhse173112\\pages\\admin\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|c:\\users\\tinh khung\\source\\repos\\prn221_pe_su24_082408_vovantinhse173112\\prn221_pe_su24_082408_vovantinhse173112\\pages\\admin\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|solutionrelative:prn221_pe_su24_082408_vovantinhse173112\\pages\\admin\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|c:\\users\\tinh khung\\source\\repos\\prn221_pe_su24_082408_vovantinhse173112\\prn221_pe_su24_082408_vovantinhse173112\\pages\\admin\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|solutionrelative:prn221_pe_su24_082408_vovantinhse173112\\pages\\admin\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|c:\\users\\tinh khung\\source\\repos\\prn221_pe_su24_082408_vovantinhse173112\\prn221_pe_su24_082408_vovantinhse173112\\pages\\admin\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|solutionrelative:prn221_pe_su24_082408_vovantinhse173112\\pages\\admin\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|c:\\users\\tinh khung\\source\\repos\\prn221_pe_su24_082408_vovantinhse173112\\prn221_pe_su24_082408_vovantinhse173112\\pages\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F79AB08E-F980-485A-84B3-EBB513DF3633}|PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj|solutionrelative:prn221_pe_su24_082408_vovantinhse173112\\pages\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81D05E2E-DDFA-4B3D-BF02-8F20F7F68DA3}|Services\\Services.csproj|c:\\users\\tinh khung\\source\\repos\\prn221_pe_su24_082408_vovantinhse173112\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81D05E2E-DDFA-4B3D-BF02-8F20F7F68DA3}|Services\\Services.csproj|solutionrelative:services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96D75BC7-5636-421C-8920-6102EDD66E83}|Repositories (2)\\Repositories.csproj|c:\\users\\tinh khung\\source\\repos\\prn221_pe_su24_082408_vovantinhse173112\\repositories (2)\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96D75BC7-5636-421C-8920-6102EDD66E83}|Repositories (2)\\Repositories.csproj|solutionrelative:repositories (2)\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96D75BC7-5636-421C-8920-6102EDD66E83}|Repositories (2)\\Repositories.csproj|c:\\users\\tinh khung\\source\\repos\\prn221_pe_su24_082408_vovantinhse173112\\repositories (2)\\models\\euro2024dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96D75BC7-5636-421C-8920-6102EDD66E83}|Repositories (2)\\Repositories.csproj|solutionrelative:repositories (2)\\models\\euro2024dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Repositories\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Repositories\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TINH KHUNG\\AppData\\Local\\Temp\\.vsdbgsrc\\dcaae007188a4fbd70cafc06651deca5b7c869f3a5e1157ab725c531c6fa8b2a\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 152,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Properties\\launchSettings.json",
+              "RelativeToolTip": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-21T04:29:50.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Login.cshtml.cs",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Login.cshtml.cs",
+              "RelativeToolTip": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Login.cshtml.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAxwCMAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T03:50:11.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Program.cs",
+              "RelativeDocumentMoniker": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Program.cs",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Program.cs",
+              "RelativeToolTip": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Program.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACQAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T03:34:24.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Login.cshtml",
+              "RelativeDocumentMoniker": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Login.cshtml",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Login.cshtml",
+              "RelativeToolTip": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Login.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-21T03:48:25.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Index.cshtml",
+              "RelativeDocumentMoniker": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Index.cshtml",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Index.cshtml",
+              "RelativeToolTip": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-21T03:57:15.975Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Index.cshtml.cs",
+              "RelativeToolTip": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Index.cshtml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T03:57:16.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Details.cshtml",
+              "RelativeDocumentMoniker": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Details.cshtml",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Details.cshtml",
+              "RelativeToolTip": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-21T03:57:15.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\appsettings.json",
+              "RelativeDocumentMoniker": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\appsettings.json",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\appsettings.json",
+              "RelativeToolTip": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-21T03:33:48.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Logout.cshtml",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Logout.cshtml",
+              "RelativeDocumentMoniker": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Logout.cshtml",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Logout.cshtml",
+              "RelativeToolTip": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Logout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-21T03:48:21.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PRN221_PE_SU24_082408_VoVanTinh",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj",
+              "RelativeDocumentMoniker": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj",
+              "RelativeToolTip": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinh.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-07-21T03:40:28.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Details.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Details.cshtml.cs",
+              "RelativeDocumentMoniker": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Details.cshtml.cs",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Details.cshtml.cs",
+              "RelativeToolTip": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Details.cshtml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T03:57:15.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Delete.cshtml",
+              "RelativeDocumentMoniker": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Delete.cshtml",
+              "RelativeToolTip": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Delete.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-21T03:57:15.757Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Delete.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Delete.cshtml.cs",
+              "RelativeDocumentMoniker": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Delete.cshtml.cs",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Delete.cshtml.cs",
+              "RelativeToolTip": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Delete.cshtml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T03:57:15.861Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Edit.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Edit.cshtml.cs",
+              "RelativeDocumentMoniker": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Edit.cshtml.cs",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Edit.cshtml.cs",
+              "RelativeToolTip": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Edit.cshtml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T03:57:15.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Edit.cshtml",
+              "RelativeDocumentMoniker": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Edit.cshtml",
+              "RelativeToolTip": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-21T03:57:15.343Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Create.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Create.cshtml.cs",
+              "RelativeDocumentMoniker": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Create.cshtml.cs",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Create.cshtml.cs",
+              "RelativeToolTip": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Create.cshtml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T03:57:15.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Create.cshtml",
+              "RelativeDocumentMoniker": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Create.cshtml",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Create.cshtml",
+              "RelativeToolTip": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Admin\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-21T03:57:15.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Logout.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Logout.cshtml.cs",
+              "RelativeDocumentMoniker": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Logout.cshtml.cs",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Logout.cshtml.cs",
+              "RelativeToolTip": "PRN221_PE_SU24_082408_VoVanTinhSE173112\\Pages\\Logout.cshtml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T03:54:25.445Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Services\\AccountService.cs",
+              "RelativeDocumentMoniker": "Services\\AccountService.cs",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Services\\AccountService.cs",
+              "RelativeToolTip": "Services\\AccountService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T03:48:04.778Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AccountRepository.cs",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Repositories (2)\\AccountRepository.cs",
+              "RelativeDocumentMoniker": "Repositories (2)\\AccountRepository.cs",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Repositories (2)\\AccountRepository.cs",
+              "RelativeToolTip": "Repositories (2)\\AccountRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T03:50:01.328Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Euro2024DbContext.cs",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Repositories (2)\\Models\\Euro2024DbContext.cs",
+              "RelativeDocumentMoniker": "Repositories (2)\\Models\\Euro2024DbContext.cs",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Repositories (2)\\Models\\Euro2024DbContext.cs",
+              "RelativeToolTip": "Repositories (2)\\Models\\Euro2024DbContext.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAxwCUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T03:47:36.083Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Repositories\\Class1.cs",
+              "RelativeDocumentMoniker": "Repositories\\Class1.cs",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\source\\repos\\PRN221_PE_SU24_082408_VoVanTinhSE173112\\Repositories\\Class1.cs",
+              "RelativeToolTip": "Repositories\\Class1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T03:41:00.141Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\TINH KHUNG\\AppData\\Local\\Temp\\.vsdbgsrc\\dcaae007188a4fbd70cafc06651deca5b7c869f3a5e1157ab725c531c6fa8b2a\\Program.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\dcaae007188a4fbd70cafc06651deca5b7c869f3a5e1157ab725c531c6fa8b2a\\Program.cs",
+              "ToolTip": "C:\\Users\\TINH KHUNG\\AppData\\Local\\Temp\\.vsdbgsrc\\dcaae007188a4fbd70cafc06651deca5b7c869f3a5e1157ab725c531c6fa8b2a\\Program.cs [Read Only]",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\dcaae007188a4fbd70cafc06651deca5b7c869f3a5e1157ab725c531c6fa8b2a\\Program.cs [Read Only]",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T03:38:59.971Z",
+              "EditorCaption": " [Read Only]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
